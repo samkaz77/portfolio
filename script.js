@@ -398,7 +398,7 @@ async function processCommand(input) {
     isProcessing = true;
     terminalInput.disabled = true;
 
-    addTerminalLine('samreen@portfolio:~$', cmd);
+    addTerminalLine('samreen@portfolio:', cmd);
 
     if (COMMANDS[cmd]) {
         const result = COMMANDS[cmd].run();
