@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samreen Kazmi — AI/ML Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="name">Samreen Kazmi</h1>
+            <p class="title">AI/ML Engineer · CS Graduate</p>
+            <p class="tagline">Building intelligent systems with ML, GenAI & Full-Stack</p>
+            <p class="location">📍 Lahore, Pakistan · Open to AI/ML roles</p>
+        </header>
+
+        <!-- 3D Flip Card -->
+        <div class="card-area">
+            <div class="card-stage" id="cardStage">
+                <div class="card-3d" id="card3D">
+                    <div class="card-face card-front">
+                        <img src="profile.jpg" alt="Samreen Kazmi" class="card-img" id="cardImg">
+                        <div class="card-fallback" id="cardFallback" style="display:none;">
+                            <span>SK</span>
+                            <p class="fallback-hint">add profile.jpg</p>
+                        </div>
+                        <div class="card-overlay">
+                            <p class="card-name">Samreen Kazmi</p>
+                            <p class="card-role">AI/ML Engineer · NLP · CV · GenAI</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <div class="code-icon">🧠</div>
+                            <p class="back-title">AI/ML Engineer</p>
+                            <p class="back-sub">Deep Learning · NLP · GenAI</p>
+                            <div class="back-skills">
+                                <span>PyTorch</span>
+                                <span>TensorFlow</span>
+                                <span>NLP</span>
+                                <span>Computer Vision</span>
+                                <span>Python</span>
+                                <span>GANs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="card-hint">💡 Drag left/right to rotate · Click to flip</p>
+        </div>
+
+        <!-- Terminal -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">samreen@portfolio:~$</span>
+            </div>
+            <div class="terminal-body" id="terminalOutput"></div>
+            <div class="terminal-input-line">
+                <span class="prompt">samreen@portfolio:~$</span>
+                <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-header">
+                <span>🤖 AI Chat — Ask about Samreen</span>
+                <button id="closeChat">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome message JS se add hoga -->
+            </div>
+            <div class="quick-replies" id="quickReplies">
+                <!-- Quick reply buttons JS se add honge -->
+            </div>
+            <div class="chat-input-line">
+                <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off">
+                <button id="sendChat">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
