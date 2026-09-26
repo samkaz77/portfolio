@@ -461,7 +461,7 @@ header {
 .chat-messages {
     max-height: 260px;
     overflow-y: auto;
-    padding: 15px;
+    padding: 12px 12px 8px 12px;
     font-size: 0.9rem;
     line-height: 1.5;
     background-color: var(--black);
@@ -484,22 +484,22 @@ header {
 /* Chat welcome message */
 .chat-welcome {
     background: rgba(252, 163, 17, 0.08);
-    border-left: 3px solid #fca311;
+    border-left: 3px solid var(--gold);
     padding: 10px 12px;
     border-radius: 8px;
     margin-bottom: 8px;
     font-size: 0.88rem;
     line-height: 1.45;
-    color: #e5e5e5;
+    color: var(--grey);
 }
 
 .chat-welcome strong {
-    color: #ffffff;
+    color: var(--white);
     font-size: 0.95rem;
 }
 
 .welcome-hint {
-    color: #fca311;
+    color: var(--gold);
     font-size: 0.82em;
     display: block;
     margin-top: 6px;
