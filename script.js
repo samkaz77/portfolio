@@ -398,7 +398,7 @@ async function processCommand(input) {
     isProcessing = true;
     terminalInput.disabled = true;
 
-    addTerminalLine('samreen@portfolio:', cmd);
+    addTerminalLine('samreen@portfolio:~', cmd);
 
     if (COMMANDS[cmd]) {
         const result = COMMANDS[cmd].run();
@@ -755,12 +755,12 @@ function analyzeIntent(text) {
         return withLang({ type: 'greeting' });
     }
 
-    // --- 4.4 AVAILABILITY — MUST come BEFORE AI check (because "AI roles" contains "AI") ---
+    // --- 4.4 AVAILABILITY — MUST come BEFORE AI check ---
     if (/\b(available for hire|available for work|available for job|available for ai|available for ml|open to work|open to opportunities|open to ai|open to ml|freelance|hiring|opportunities|job offer|ai roles?|ml roles?|ai job|ml job|networking|actively looking)\b/.test(t)) {
         return withLang({ type: 'availability' });
     }
 
-    // --- 4.5 AI/ML specific queries (after availability) ---
+    // --- 4.5 AI/ML specific queries ---
     const isAIQuestion = /\b(ai|ml|machine learning|deep learning|neural|nlp|computer vision|generative ai|genai|gan|gan's|transformers?|pytorch|tensorflow|scikit|convnext|vit|vision transformer)\b/.test(t);
 
     if (isAIQuestion) {
@@ -781,7 +781,7 @@ function analyzeIntent(text) {
         return withLang({ type: 'research' });
     }
 
-    // --- 5. Generic "X batao" / "tell me about X" ---
+    // --- 5. Generic "X batao" ---
     if (/\b(batao|btana|bata|bare mein|ke bare|about|tell me about|sunao|bolo)\b/.test(t)) {
         if (/\bfigma\b/.test(t)) return withLang({ type: 'figma_projects_list' });
         if (/\bproject/.test(t)) return withLang({ type: 'projects' });
@@ -796,7 +796,7 @@ function analyzeIntent(text) {
         if (/\bwho\b|\babout (her|samreen|uska|uski|unki)\b/.test(t)) return withLang({ type: 'intro' });
     }
 
-    // --- 5.5 Recommendation — MUST come BEFORE figma_projects_list ---
+    // --- 5.5 Recommendation ---
     if (/\b(best|recommend|which one|konsa|kaun sa|kaunsi|favourite|favorite|top|behtareen|sab se acha|sabse acha)\b/.test(t)) {
         return withLang({ type: 'recommendation', topic: chatMemory.lastTopic, original: text });
     }
@@ -863,12 +863,12 @@ function analyzeIntent(text) {
         return withLang({ type: 'age' });
     }
 
-    // --- 8. CONTACT (email/linkedin) — MUST come BEFORE location ---
+    // --- 8. CONTACT ---
     if (/\b(email|mail|gmail|e-mail|e mail|email address|linkedin|linked in)\b/.test(t)) {
         return withLang({ type: 'contact', original: text });
     }
 
-    // --- 9. Education (BEFORE location — "university" is in both) ---
+    // --- 9. Education ---
     if (/\b(education|study|studied|university|uni|college|degree|fast|nuces|graduated|bs|bachelor|course|subject|academic|cgpa|gpa|parhai|padhai)\b/.test(t)) {
         return withLang({ type: 'education' });
     }
@@ -879,7 +879,7 @@ function analyzeIntent(text) {
         return withLang({ type: 'location' });
     }
 
-    // --- 11. Skills (ORDER MATTERS — specific first, general last) ---
+    // --- 11. Skills ---
     if (/\b(technical skills?|tech skills?|programming|programming languages?|coding|stack|technologies|tools|tech stack)\b/.test(t)) {
         return withLang({ type: 'technical_skills' });
     }
@@ -901,7 +901,7 @@ function analyzeIntent(text) {
         return withLang({ type: 'experience' });
     }
 
-    // --- 14. Projects (generic) ---
+    // --- 14. Projects ---
     if (/\b(project|projects|fyp|final year|portfolio|built|made|developed|created)\b/.test(t)) {
         return withLang({ type: 'projects' });
     }
