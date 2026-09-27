@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #000000 0%, #14213D 100%);
+    color: #FFFFFF;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ header {
     font-size: clamp(1.6rem, 6vw, 2.5rem);
     font-weight: 700;
     letter-spacing: 2px;
-    background: linear-gradient(90deg, #a855f7, #ec4899);
+    background: linear-gradient(90deg, #FCA311, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -53,7 +53,7 @@ header {
 
 .title {
     font-size: clamp(0.85rem, 3.5vw, 1rem);
-    color: #a855f7;
+    color: #FCA311;
     margin-top: 8px;
     line-height: 1.4;
     padding: 0 5px;
@@ -61,7 +61,7 @@ header {
 
 .location {
     font-size: clamp(0.75rem, 3vw, 0.85rem);
-    color: #888;
+    color: #E5E5E5;
     margin-top: 5px;
 }
 
@@ -112,9 +112,9 @@ header {
     overflow: hidden;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    border: 1px solid #a855f7;
-    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.35);
-    background: linear-gradient(135deg, #1a1a2e, #2d1b4e);
+    border: 1px solid #FCA311;
+    box-shadow: 0 20px 60px rgba(252, 163, 17, 0.3);
+    background: linear-gradient(135deg, #14213D, #0a1530);
 }
 
 /* FRONT */
@@ -140,8 +140,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #a855f7, #ec4899);
-    color: #fff;
+    background: linear-gradient(135deg, #FCA311, #FFB84D);
+    color: #000000;
     font-size: clamp(3rem, 15vw, 5rem);
     font-weight: 700;
     letter-spacing: 4px;
@@ -154,6 +154,7 @@ header {
     opacity: 0.7;
     font-weight: 400;
     text-transform: uppercase;
+    color: #000000;
 }
 
 .card-overlay {
@@ -162,7 +163,7 @@ header {
     left: 0;
     right: 0;
     padding: 15px 12px 12px;
-    background: linear-gradient(to top, rgba(10, 10, 15, 0.95) 0%, rgba(10, 10, 15, 0.6) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
     text-align: center;
     pointer-events: none;
 }
@@ -170,15 +171,17 @@ header {
 .card-name {
     font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: 700;
-    color: #fff;
+    color: #FFFFFF;
     letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .card-role {
     font-size: clamp(0.65rem, 2.5vw, 0.72rem);
-    color: #c084fc;
+    color: #FCA311;
     margin-top: 5px;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* BACK */
@@ -188,7 +191,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);
+    background: linear-gradient(135deg, #14213D 0%, #0a1530 100%);
     position: relative;
 }
 
@@ -197,8 +200,8 @@ header {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15), transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.15), transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(252, 163, 17, 0.15), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 184, 77, 0.15), transparent 50%);
     pointer-events: none;
 }
 
@@ -211,23 +214,24 @@ header {
 .code-icon {
     font-size: clamp(2rem, 9vw, 3rem);
     font-weight: 700;
-    color: #a855f7;
+    color: #FCA311;
     font-family: 'Courier New', monospace;
     margin-bottom: 12px;
     letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(252, 163, 17, 0.5);
 }
 
 .back-title {
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     font-weight: 700;
-    color: #fff;
+    color: #FFFFFF;
     letter-spacing: 2px;
     margin-bottom: 6px;
 }
 
 .back-sub {
     font-size: clamp(0.7rem, 2.8vw, 0.78rem);
-    color: #c084fc;
+    color: #FCA311;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
@@ -243,16 +247,16 @@ header {
 .back-skills span {
     font-size: clamp(0.6rem, 2.5vw, 0.7rem);
     padding: 4px 9px;
-    background: rgba(168, 85, 247, 0.15);
-    border: 1px solid rgba(168, 85, 247, 0.4);
+    background: rgba(252, 163, 17, 0.15);
+    border: 1px solid rgba(252, 163, 17, 0.5);
     border-radius: 20px;
-    color: #c084fc;
+    color: #FCA311;
 }
 
 .card-hint {
     margin-top: 12px;
     font-size: clamp(0.65rem, 2.5vw, 0.72rem);
-    color: #666;
+    color: #E5E5E5;
     text-align: center;
     padding: 0 10px;
 }
@@ -261,18 +265,18 @@ header {
    TERMINAL
    ============================================================ */
 .terminal {
-    background-color: #0d0d0d;
-    border: 1px solid #333;
+    background-color: #000000;
+    border: 1px solid #FCA311;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 50px rgba(168, 85, 247, 0.15);
+    box-shadow: 0 0 50px rgba(252, 163, 17, 0.15);
     width: 100%;
 }
 
 .terminal-header {
-    background-color: #1a1a1a;
+    background-color: #14213D;
     padding: 8px 12px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #14213D;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -287,11 +291,11 @@ header {
 }
 
 .dot.red { background-color: #ff5f56; }
-.dot.yellow { background-color: #ffbd2e; }
+.dot.yellow { background-color: #FCA311; }
 .dot.green { background-color: #27c93f; }
 
 .terminal-title {
-    color: #888;
+    color: #E5E5E5;
     font-size: clamp(0.65rem, 2.8vw, 0.85rem);
     margin-left: 8px;
     white-space: nowrap;
@@ -317,18 +321,18 @@ header {
 }
 
 .prompt {
-    color: #a855f7;
+    color: #FCA311;
     margin-right: 6px;
     word-break: break-all;
 }
 
 .command {
-    color: #ffffff;
+    color: #FFFFFF;
     word-break: break-word;
 }
 
 .output {
-    color: #ccc;
+    color: #E5E5E5;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -339,10 +343,10 @@ header {
 }
 
 .output code {
-    background-color: #222;
+    background-color: #14213D;
     padding: 1px 5px;
     border-radius: 3px;
-    color: #a855f7;
+    color: #FCA311;
     font-size: 0.9em;
     word-break: break-all;
 }
@@ -360,23 +364,24 @@ header {
 }
 
 .output a {
-    color: #a855f7;
+    color: #FCA311;
     text-decoration: none;
-    border-bottom: 1px dotted #a855f7;
+    border-bottom: 1px dotted #FCA311;
     word-break: break-all;
     overflow-wrap: anywhere;
 }
 
 .output a:hover {
-    color: #ec4899;
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
 }
 
 .terminal-input-line {
     display: flex;
     align-items: center;
     padding: 10px 12px;
-    border-top: 1px solid #333;
-    background-color: #0a0a0a;
+    border-top: 1px solid #14213D;
+    background-color: #000000;
 }
 
 #terminalInput {
@@ -385,14 +390,14 @@ header {
     background: transparent;
     border: none;
     outline: none;
-    color: #ffffff;
+    color: #FFFFFF;
     font-family: inherit;
     font-size: clamp(0.75rem, 3vw, 0.95rem);
     margin-left: 6px;
 }
 
 .term-cursor {
-    color: #a855f7;
+    color: #FCA311;
     animation: blink 1s infinite;
 }
 
@@ -406,22 +411,22 @@ header {
    ============================================================ */
 .chat-container {
     margin-top: 15px;
-    background-color: #0d0d0d;
-    border: 1px solid #a855f7;
+    background-color: #000000;
+    border: 1px solid #FCA311;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 30px rgba(252, 163, 17, 0.2);
     width: 100%;
 }
 
 .chat-header {
-    background-color: #1a1a1a;
+    background-color: #14213D;
     padding: 10px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #333;
-    color: #a855f7;
+    border-bottom: 1px solid #14213D;
+    color: #FCA311;
     font-size: clamp(0.75rem, 3vw, 0.9rem);
     font-weight: 700;
     gap: 10px;
@@ -436,7 +441,7 @@ header {
 #closeChat {
     background: transparent;
     border: none;
-    color: #888;
+    color: #E5E5E5;
     font-size: 1.1rem;
     cursor: pointer;
     font-family: inherit;
@@ -458,14 +463,14 @@ header {
 }
 
 .chat-messages .user-msg {
-    color: #ec4899;
+    color: #FCA311;
     margin-bottom: 10px;
     word-wrap: break-word;
     overflow-wrap: anywhere;
 }
 
 .chat-messages .bot-msg {
-    color: #ccc;
+    color: #E5E5E5;
     margin-bottom: 12px;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -476,23 +481,23 @@ header {
     display: flex;
     gap: 6px;
     padding: 10px 12px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #14213D;
 }
 
 #chatInput {
     flex: 1;
     min-width: 0;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
+    background-color: #14213D;
+    border: 1px solid #14213D;
     border-radius: 6px;
     padding: 8px 10px;
-    color: #fff;
+    color: #FFFFFF;
     font-family: inherit;
     font-size: clamp(0.75rem, 3vw, 0.9rem);
     outline: none;
 }
 
-#chatInput:focus { border-color: #a855f7; }
+#chatInput:focus { border-color: #FCA311; }
 
 #chatInput:disabled {
     opacity: 0.5;
@@ -500,8 +505,8 @@ header {
 }
 
 #sendChat {
-    background: linear-gradient(90deg, #a855f7, #ec4899);
-    color: #fff;
+    background: linear-gradient(90deg, #FCA311, #FFB84D);
+    color: #000000;
     border: none;
     border-radius: 6px;
     padding: 8px 14px;
@@ -525,7 +530,7 @@ header {
     display: inline-flex;
     gap: 4px;
     padding: 8px 12px;
-    background: #1a1a1a;
+    background: #14213D;
     border-radius: 12px;
     margin-bottom: 10px;
 }
@@ -533,7 +538,7 @@ header {
 .typing-indicator span {
     width: 7px;
     height: 7px;
-    background: #a855f7;
+    background: #FCA311;
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out;
 }
@@ -548,7 +553,7 @@ header {
 
 .bot-msg.typing::after {
     content: '▋';
-    color: #a855f7;
+    color: #FCA311;
     animation: blink 1s infinite;
     margin-left: 2px;
 }
@@ -557,9 +562,9 @@ header {
    SCROLLBAR
    ============================================================ */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: #111; }
-::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #ec4899; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: #FCA311; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #FFB84D; }
 
 /* ============================================================
    MOBILE — Small Phones (< 480px)
