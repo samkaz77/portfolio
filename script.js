@@ -66,23 +66,38 @@ const PROFILE = {
         {
             name: 'TweetLens Pakistan — AI Social Media Analytics (FYP)',
             category: 'AI/ML · NLP',
-            desc: 'Built a web application that collected and processed 13,000+ tweets from X (Twitter) to perform sentiment analysis on three major issues in Pakistan: theft, loadshedding, and water shortage. Worked hands-on with data collection, cleaning, NLP, and deriving meaningful insights from real-world, unstructured data. Implemented city-based filtering, trend dashboards, and automated PDF report generation.',
+            icon: '📊',
+            shortName: 'TweetLens',
+            desc: 'Final Year Project — a web application that collects and processes 13,000+ tweets from X (Twitter) to perform sentiment analysis on 3 major issues in Pakistan: theft, loadshedding, and water shortage.',
+            longDesc: 'Built an end-to-end NLP pipeline for real-world social sentiment analysis. Implemented preprocessing for code-mixed text (English, Urdu, Roman Urdu), handling transliteration inconsistencies. Built data collection pipeline and visualization dashboard for sentiment trends across issues. Implemented city-based filtering, trend dashboards, and automated PDF report generation.',
             tech: ['Python', 'NLP', 'Transformers', 'Scikit-learn', 'Pandas', 'Streamlit'],
-            highlight: 'Final Year Project · 13,000+ tweets analyzed · Social Impact'
+            metrics: ['📈 13,000+ tweets', '🎯 3 issues', '🏆 FYP'],
+            highlight: 'Final Year Project · 13,000+ tweets analyzed · Social Impact',
+            link: 'https://github.com/Aymanch2764/TweetLens-Pakistan'
         },
         {
             name: 'Pix2Pix — Sketch-to-Photo Translation',
             category: 'AI/ML · GANs',
-            desc: 'Trained a Conditional GAN on 35,000 sketch-photo pairs to convert hand-drawn sketches into photorealistic images. Implemented U-Net generator, PatchGAN discriminator, and L1 loss optimization.',
-            tech: ['PyTorch', 'GANs', 'U-Net', 'Computer Vision'],
-            highlight: 'Deep Learning · Image Generation'
+            icon: '🖼️',
+            shortName: 'Pix2Pix',
+            desc: 'Conditional GAN trained on 35,000 sketch-photo pairs to convert hand-drawn sketches into photorealistic images.',
+            longDesc: 'Implemented a Conditional GAN architecture for image-to-image translation. Built U-Net generator with skip connections and PatchGAN discriminator. Trained on 35,000 sketch-photo pairs with L1 loss optimization. Demonstrates understanding of neural networks, adversarial training, and model optimization.',
+            tech: ['PyTorch', 'GANs', 'U-Net', 'PatchGAN', 'Computer Vision'],
+            metrics: ['🖼️ 35K pairs', '🧠 U-Net + PatchGAN', '🎨 Image Gen'],
+            highlight: 'Deep Learning · Image Generation',
+            link: ''
         },
         {
             name: 'Skin Lesion Classification — Medical AI',
             category: 'AI/ML · Computer Vision',
-            desc: 'Built a multi-class classifier using ConvNeXt-B4 and Vision Transformer (ViT-B/16) to detect 7 types of skin lesions from the HAM10000 dataset. Achieved strong performance through transfer learning and data augmentation.',
+            icon: '🔬',
+            shortName: 'Skin Lesion',
+            desc: 'Multi-class classifier using ConvNeXt-B4 and Vision Transformer (ViT-B/16) to detect 7 types of skin lesions from the HAM10000 dataset.',
+            longDesc: 'Built a deep learning pipeline for medical image classification on HAM10000 and ISIC 2018 datasets. Compared CNN-based (ConvNeXt-B4) and Transformer-based (ViT-B/16) architectures. Applied transfer learning and data augmentation for strong performance on 7-class classification.',
             tech: ['PyTorch', 'ConvNeXt', 'ViT', 'Transfer Learning', 'Computer Vision'],
-            highlight: 'Healthcare AI · 7-Class Classification'
+            metrics: ['🔬 7 classes', '📊 HAM10000', '🏥 Medical AI'],
+            highlight: 'Healthcare AI · 7-Class Classification',
+            link: 'https://github.com/usamasShk/ComputerVision'
         }
     ],
     figmaProjects: [
@@ -946,6 +961,27 @@ function analyzeIntent(text) {
 }
 
 // ============================================================
+// RICH PROJECT CARD HELPER
+// ============================================================
+function renderProjectCard(proj) {
+    return `<div class="project-card">
+        <div class="pc-header">
+            <span class="pc-icon">${proj.icon || '📁'}</span>
+            <span class="pc-title">${proj.name}</span>
+            <span class="pc-category">${proj.category}</span>
+        </div>
+        <div class="pc-desc">${proj.desc}</div>
+        <div class="pc-metrics">
+            ${proj.metrics.map(m => `<span class="pc-metric">${m}</span>`).join('')}
+        </div>
+        <div class="pc-tech">
+            ${proj.tech.map(t => `<span>${t}</span>`).join('')}
+        </div>
+        ${proj.link ? `<a href="${proj.link}" target="_blank" class="pc-link">🔗 View Repository</a>` : ''}
+    </div>`;
+}
+
+// ============================================================
 // REPLY GENERATION — Language-aware
 // ============================================================
 function generateReply(intent) {
@@ -1021,11 +1057,17 @@ function generateReply(intent) {
                 : `Samreen's **AI/ML skills**:\n\n🧠 **Core:** Python, Machine Learning, Deep Learning, Generative AI\n📝 **NLP:** Transformers, Sentiment Analysis, Text Classification\n👁️ **Computer Vision:** ConvNeXt, Vision Transformers (ViT), GANs\n🛠️ **Frameworks:** PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy\n📊 **Techniques:** Transfer Learning, Model Optimization, Data Augmentation`;
         }
 
-        case 'ai_projects': {
-            updateMemory('ai_projects');
-            return lang === 'ur'
-                ? `Uske **AI/ML projects**:\n\n1. **TweetLens Pakistan** (FYP) — 13,000+ tweets par NLP analysis (theft, loadshedding, water shortage)\n2. **Pix2Pix** — Conditional GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nKis ki detail chahiye? Bas naam bolein.`
-                : `Her **AI/ML projects**:\n\n1. **TweetLens Pakistan** (FYP) — NLP analysis on 13,000+ tweets (theft, loadshedding, water shortage)\n2. **Pix2Pix** — Conditional GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nWant details on any? Just say the name.`;
+        case 'ai_projects':
+        case 'projects': {
+            updateMemory('projects');
+            const intro = lang === 'ur'
+                ? `Uske **AI/ML projects** (details ke liye naam bolein):\n\n`
+                : `Her **AI/ML projects** (say the name for details):\n\n`;
+            const cards = PROFILE.projects.map(renderProjectCard).join('');
+            const outro = lang === 'ur'
+                ? `<p style="margin-top:10px;">Kis ki detail chahiye? Bas naam bolein.</p>`
+                : `<p style="margin-top:10px;">Want details on any? Just say the name.</p>`;
+            return intro + cards + outro;
         }
 
         case 'ai_experience': {
@@ -1133,9 +1175,8 @@ function generateReply(intent) {
                     : `Great! Here are all 11 Figma projects:\n\n**University:** LibraSync\n**Self-taught:** SK Fashion, SK Donuts, UI Card Designs, Poster Designs, Landing Page, Dashboard UI, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(By the way, her main focus is AI/ML — you can also ask "AI projects"!)`;
             }
             if (topic === 'projects' || topic === 'ai_projects') {
-                return lang === 'ur'
-                    ? `Zaroor! Uske AI/ML projects hain:\n\n1. **TweetLens Pakistan** (FYP) — 13,000+ tweets par NLP analysis\n2. **Pix2Pix** — GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nKis ki detail chahiye?`
-                    : `Sure! Her AI/ML projects are:\n\n1. **TweetLens Pakistan** (FYP) — NLP analysis on 13,000+ tweets\n2. **Pix2Pix** — GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nWant details on any?`;
+                const cards = PROFILE.projects.map(renderProjectCard).join('');
+                return (lang === 'ur' ? `Zaroor! Uske AI/ML projects:\n\n` : `Sure! Her AI/ML projects:\n\n`) + cards;
             }
             return lang === 'ur'
                 ? `Zaroor! Kya jaanna chahenge — AI skills, projects, research, education, experience, ya contact?`
@@ -1219,7 +1260,7 @@ function generateReply(intent) {
             }
             const proj = list[idx];
             updateMemory('projects', proj.name);
-            return `**${proj.name}** — ${proj.category}\n\n${proj.desc}\n\n**Tech:** ${proj.tech.join(', ')}\n**${proj.highlight}**`;
+            return renderProjectCard(proj);
         }
 
         case 'intro':
@@ -1370,30 +1411,23 @@ function generateReply(intent) {
                 ? `Wo currently **Web Developer** hain **Proagency ApS** (Denmark) mein, Feb 2026 se — focus: **WordPress, PHP, aur Full-Stack development**. Unka **AI/ML background** bhi strong hai — academic aur project work ke through (NLP, Computer Vision, GenAI). Wo **AI/ML roles** ke liye actively looking hain, aur apne current role mein bhi top-quality kaam kar rahi hain.`
                 : `She currently works as a **Web Developer** at **Proagency ApS** (Denmark, from Feb 2026) — focus: **WordPress, PHP, and Full-Stack development**. She also has a strong **AI/ML background** through academic and project work (NLP, Computer Vision, GenAI). She's **actively looking for AI/ML roles**, while continuing to deliver strong work in her current position.`;
 
-        case 'projects':
-        case 'ai_projects':
-            updateMemory('projects');
-            return lang === 'ur'
-                ? `Uske **AI/ML projects**:\n\n1. **TweetLens Pakistan** (FYP) — 13,000+ tweets par NLP analysis (theft, loadshedding, water shortage)\n2. **Pix2Pix** — Conditional GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nKis ki detail chahiye? Bas naam bolein.`
-                : `Her **AI/ML projects**:\n\n1. **TweetLens Pakistan** (FYP) — NLP analysis on 13,000+ tweets (theft, loadshedding, water shortage)\n2. **Pix2Pix** — Conditional GAN (U-Net + PatchGAN), 35K sketch-photo pairs\n3. **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, 7-class medical imaging\n\nWant details on any? Just say the name.`;
-
-        case 'project_tweetlens':
+        case 'project_tweetlens': {
             updateMemory('projects', 'TweetLens');
-            return lang === 'ur'
-                ? `**TweetLens Pakistan** — Samreen ka **Final Year Project** (AI/ML · NLP).\n\nEk web application jo **13,000+ tweets from X (Twitter)** collect aur process karta tha — Pakistan ke **3 major issues** par sentiment analysis: theft, loadshedding, aur water shortage. Data collection, cleaning, NLP, aur real-world unstructured data se meaningful insights. City-based filtering, trend dashboards, aur automated PDF reports.\n\n**Tech:** Python, NLP, Transformers, Scikit-learn, Pandas, Streamlit\n**Highlight:** 13,000+ tweets · 3 issues · Social Impact`
-                : `**TweetLens Pakistan** — Samreen's **Final Year Project** (AI/ML · NLP).\n\nA web application that collected and processed **13,000+ tweets from X (Twitter)** to perform sentiment analysis on **3 major issues in Pakistan**: theft, loadshedding, and water shortage. Hands-on work with data collection, cleaning, NLP, and deriving meaningful insights from real-world, unstructured data. City-based filtering, trend dashboards, and automated PDF reports.\n\n**Tech:** Python, NLP, Transformers, Scikit-learn, Pandas, Streamlit\n**Highlight:** 13,000+ tweets · 3 issues · Social Impact`;
+            const proj = PROFILE.projects.find(p => p.shortName === 'TweetLens');
+            return renderProjectCard(proj);
+        }
 
-        case 'project_pix2pix':
+        case 'project_pix2pix': {
             updateMemory('projects', 'Pix2Pix');
-            return lang === 'ur'
-                ? `**Pix2Pix** — Sketch-to-Photo Translation (AI/ML · GANs).\n\nConditional GAN trained on 35,000 sketch-photo pairs to convert hand-drawn sketches into photorealistic images. Implemented U-Net generator, PatchGAN discriminator, and L1 loss optimization.\n\n**Tech:** PyTorch, GANs, U-Net, Computer Vision\n**Highlight:** Deep Learning · Image Generation`
-                : `**Pix2Pix** — Sketch-to-Photo Translation (AI/ML · GANs).\n\nConditional GAN trained on 35,000 sketch-photo pairs to convert hand-drawn sketches into photorealistic images. Implemented U-Net generator, PatchGAN discriminator, and L1 loss optimization.\n\n**Tech:** PyTorch, GANs, U-Net, Computer Vision\n**Highlight:** Deep Learning · Image Generation`;
+            const proj = PROFILE.projects.find(p => p.shortName === 'Pix2Pix');
+            return renderProjectCard(proj);
+        }
 
-        case 'project_skin':
+        case 'project_skin': {
             updateMemory('projects', 'Skin Lesion Classification');
-            return lang === 'ur'
-                ? `**Skin Lesion Classification** — Medical AI (Computer Vision).\n\nMulti-class classifier using ConvNeXt-B4 and Vision Transformer (ViT-B/16) to detect 7 types of skin lesions from the HAM10000 dataset. Strong performance via transfer learning and data augmentation.\n\n**Tech:** PyTorch, ConvNeXt, ViT, Transfer Learning, Computer Vision\n**Highlight:** Healthcare AI · 7-Class Classification`
-                : `**Skin Lesion Classification** — Medical AI (Computer Vision).\n\nMulti-class classifier using ConvNeXt-B4 and Vision Transformer (ViT-B/16) to detect 7 types of skin lesions from the HAM10000 dataset. Strong performance via transfer learning and data augmentation.\n\n**Tech:** PyTorch, ConvNeXt, ViT, Transfer Learning, Computer Vision\n**Highlight:** Healthcare AI · 7-Class Classification`;
+            const proj = PROFILE.projects.find(p => p.shortName === 'Skin Lesion');
+            return renderProjectCard(proj);
+        }
 
         case 'certifications':
             updateMemory('certifications');
@@ -1517,26 +1551,25 @@ const quickReplies = document.getElementById('quickReplies');
 
 const QUICK_REPLIES = {
     default: [
-        { label: '🧠 AI/ML Skills', query: 'What AI skills does she have?' },
+        { label: '🧠 AI Skills', query: 'What AI skills does she have?' },
         { label: '📁 AI Projects', query: 'Tell me about her AI projects' },
         { label: '🔬 Research', query: 'What are her research interests?' },
         { label: '💼 Experience', query: 'What is her work experience?' },
         { label: '🎓 Education', query: 'Tell me about her education' },
         { label: '🏆 Awards', query: 'What awards has she won?' },
         { label: '🌍 Languages', query: 'What languages does she speak?' },
-        { label: '🎨 Figma work', query: 'Figma projects' },
+        { label: '🎨 Figma', query: 'Figma projects' },
         { label: '📧 Contact', query: 'How can I contact her?' },
         { label: '💼 Hire?', query: 'Is she available for AI roles?' },
         { label: '👋 Intro', query: 'Tell me about her' },
         { label: '❓ Help', query: 'What can you tell me?' }
     ],
     ai: [
-        { label: '🧠 AI Skills', query: 'What AI skills does she have?' },
-        { label: '📁 AI Projects', query: 'Tell me about her AI projects' },
-        { label: '🔬 Research', query: 'What are her research interests?' },
         { label: '📊 TweetLens', query: 'Tell me about TweetLens' },
         { label: '🖼️ Pix2Pix', query: 'Tell me about Pix2Pix' },
         { label: '🔬 Skin Lesion', query: 'Tell me about Skin Lesion Classification' },
+        { label: '🧠 AI Skills', query: 'What AI skills does she have?' },
+        { label: '🔬 Research', query: 'What are her research interests?' },
         { label: '💼 AI Roles?', query: 'Is she available for AI roles?' },
         { label: '🔙 Back', query: 'back' }
     ],
@@ -1548,16 +1581,16 @@ const QUICK_REPLIES = {
         { label: '🔙 Back', query: 'back' }
     ],
     figma: [
-        { label: '📋 All Figma projects', query: 'Figma projects' },
-        { label: '🎓 University only', query: 'University figma projects' },
-        { label: '📚 Self-taught only', query: 'Self-taught figma projects' },
+        { label: '📋 All Figma', query: 'Figma projects' },
+        { label: '🎓 University', query: 'University figma projects' },
+        { label: '📚 Self-taught', query: 'Self-taught figma projects' },
         { label: '🧠 AI Projects', query: 'Tell me about her AI projects' },
         { label: '🔙 Back', query: 'back' }
     ],
     contact: [
         { label: '📧 Email', query: 'What is her email address?' },
         { label: '🔗 LinkedIn', query: 'What is her LinkedIn profile?' },
-        { label: '💼 AI roles?', query: 'Is she available for AI roles?' },
+        { label: '💼 AI Roles?', query: 'Is she available for AI roles?' },
         { label: '🔙 Back', query: 'back' }
     ]
 };
