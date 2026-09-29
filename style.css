@@ -474,9 +474,181 @@ header {
     margin-bottom: 12px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: pre-wrap;
 }
 
+/* ============================================================
+   QUICK REPLY BUTTONS
+   ============================================================ */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 15px;
+    border-top: 1px solid #14213D;
+    background-color: #060818;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.quick-replies::-webkit-scrollbar { width: 4px; }
+.quick-replies::-webkit-scrollbar-thumb { background: #FCA311; border-radius: 2px; }
+
+.quick-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(252, 163, 17, 0.08);
+    border: 1px solid rgba(252, 163, 17, 0.4);
+    border-radius: 20px;
+    color: #FCA311;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+
+.quick-btn:hover:not(:disabled) {
+    background: rgba(252, 163, 17, 0.2);
+    border-color: #FCA311;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(252, 163, 17, 0.25);
+}
+
+.quick-btn:active:not(:disabled) { transform: translateY(0); }
+.quick-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ============================================================
+   CHAT WELCOME MESSAGE
+   ============================================================ */
+.chat-welcome {
+    background: linear-gradient(135deg, rgba(252, 163, 17, 0.08), rgba(20, 33, 61, 0.3));
+    border-left: 3px solid #FCA311;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.chat-welcome strong { color: #FCA311; }
+
+.welcome-hint {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* ============================================================
+   RICH PROJECT CARDS IN CHAT
+   ============================================================ */
+.project-card {
+    background: linear-gradient(135deg, rgba(20, 33, 61, 0.6), rgba(10, 14, 39, 0.8));
+    border: 1px solid rgba(252, 163, 17, 0.3);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 8px 0;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(252, 163, 17, 0.6);
+    box-shadow: 0 4px 16px rgba(252, 163, 17, 0.15);
+}
+
+.project-card .pc-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.project-card .pc-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+.project-card .pc-title {
+    color: #FCA311;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.project-card .pc-category {
+    display: inline-block;
+    font-size: 0.68rem;
+    padding: 2px 8px;
+    background: rgba(252, 163, 17, 0.15);
+    border-radius: 10px;
+    color: #FCA311;
+    margin-left: auto;
+    font-weight: 500;
+}
+
+.project-card .pc-desc {
+    color: #E5E5E5;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.project-card .pc-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.project-card .pc-metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    padding: 3px 9px;
+    background: rgba(252, 163, 17, 0.1);
+    border: 1px solid rgba(252, 163, 17, 0.25);
+    border-radius: 12px;
+    color: #FCA311;
+}
+
+.project-card .pc-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.project-card .pc-tech span {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+    background: rgba(20, 33, 61, 0.8);
+    border: 1px solid rgba(252, 163, 17, 0.2);
+    border-radius: 4px;
+    color: #E5E5E5;
+}
+
+.project-card .pc-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: #FCA311;
+    text-decoration: none;
+    border-bottom: 1px dotted #FCA311;
+    word-break: break-all;
+}
+
+.project-card .pc-link:hover {
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+
+/* ============================================================
+   CHAT INPUT
+   ============================================================ */
 .chat-input-line {
     display: flex;
     gap: 6px;
@@ -631,6 +803,35 @@ header {
 
     .output li {
         margin-bottom: 6px;
+    }
+
+    /* Quick replies on mobile */
+    .quick-replies {
+        padding: 10px 12px;
+        gap: 6px;
+        max-height: 180px;
+    }
+
+    .quick-btn {
+        padding: 7px 12px;
+        font-size: 0.72rem;
+    }
+
+    /* Project cards on mobile */
+    .project-card {
+        padding: 10px 12px;
+    }
+
+    .project-card .pc-title {
+        font-size: 0.85rem;
+    }
+
+    .project-card .pc-desc {
+        font-size: 0.78rem;
+    }
+
+    .project-card .pc-category {
+        font-size: 0.62rem;
     }
 }
 
