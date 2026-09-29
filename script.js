@@ -1316,12 +1316,48 @@ function generateReply(intent) {
                 ? `Wo Lahore, Pakistan mein based hain. Denmark ki ek company ke liye remotely kaam karti hain. 🇵🇰`
                 : `She's based in Lahore, Pakistan. She currently works remotely for a company based in Denmark. 🇵🇰`;
 
-        case 'education':
+                case 'education':
             updateMemory('education');
             return lang === 'ur'
-                ? `Usne **BS in Computer Science** kiya **FAST NUCES, Islamabad** se (2022–2026). Core AI courses: **Artificial Intelligence, Generative AI**, plus OOP, DSA, Databases, Software Engineering, Networks, OS, Mobile App Dev, Cloud Computing. 2026 mein Dean's List. 🏆`
-                : `She completed her **BS in Computer Science** from **FAST NUCES, Islamabad** (2022–2026). Core AI courses: **Artificial Intelligence, Generative AI**, plus OOP, DSA, Databases, Software Engineering, Networks, OS, Mobile App Dev, Cloud Computing. Dean's List 2026. 🏆`;
-
+                ? `🎓 **Education**\n\n` +
+                  `**BS in Computer Science**\n` +
+                  `FAST NUCES, Islamabad\n` +
+                  `2022 – 2026\n\n` +
+                  `**📚 Core AI Courses:**\n` +
+                  `• Artificial Intelligence\n` +
+                  `• Generative AI\n` +
+                  `• Machine Learning\n\n` +
+                  `**💻 Other Core Courses:**\n` +
+                  `• OOP\n` +
+                  `• Data Structures & Algorithms\n` +
+                  `• Database Systems\n` +
+                  `• Software Engineering\n` +
+                  `• Computer Networks\n` +
+                  `• Operating Systems\n` +
+                  `• Mobile App Development\n` +
+                  `• Cloud Computing\n\n` +
+                  `──────────────\n` +
+                  `🏆 **Dean's List** — 2026`
+                : `🎓 **Education**\n\n` +
+                  `**BS in Computer Science**\n` +
+                  `FAST NUCES, Islamabad\n` +
+                  `2022 – 2026\n\n` +
+                  `**📚 Core AI Courses:**\n` +
+                  `• Artificial Intelligence\n` +
+                  `• Generative AI\n` +
+                  `• Machine Learning\n\n` +
+                  `**💻 Other Core Courses:**\n` +
+                  `• OOP\n` +
+                  `• Data Structures & Algorithms\n` +
+                  `• Database Systems\n` +
+                  `• Software Engineering\n` +
+                  `• Computer Networks\n` +
+                  `• Operating Systems\n` +
+                  `• Mobile App Development\n` +
+                  `• Cloud Computing\n\n` +
+                  `──────────────\n` +
+                  `🏆 **Dean's List** — 2026`;
+            
         case 'technical_skills': {
             updateMemory('technical_skills');
             const ai = PROFILE.skills.ai_ml;
