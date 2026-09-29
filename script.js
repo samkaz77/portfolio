@@ -1004,7 +1004,7 @@ function analyzeIntent(text) {
 // RICH PROJECT CARD HELPER (for individual projects)
 // ============================================================
 function renderProjectCard(proj) {
-    return `**${proj.icon} ${proj.name}**\n_${proj.category}_\n\n${proj.desc}\n\n**Tech:** ${proj.tech.join(' · ')}\n${proj.link ? `🔗 ${proj.link}` : ''}`;
+    return `${proj.icon} **${proj.name}**\n_${proj.category}_\n\n${proj.desc}\n\n**Tech:** ${proj.tech.join(' · ')}\n${proj.link ? `🔗 ${proj.link}` : ''}`;
 }
 
 // ============================================================
