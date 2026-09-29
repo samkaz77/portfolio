@@ -1292,12 +1292,39 @@ function generateReply(intent) {
             return renderProjectCard(proj);
         }
 
-        case 'intro':
+                case 'intro':
             updateMemory('intro');
             return lang === 'ur'
-                ? `Samreen Kazmi ek **Web Developer** hain **Proagency ApS (Denmark)** mein, aur saath hi ek **AI/ML enthusiast** bhi. Computer Science graduate (FAST NUCES, 2022–2026) with strong foundation in OOP, DSA, Databases, aur Cloud Computing. Unka professional focus **WordPress, PHP, aur Full-Stack development** hai — aur unka academic/project passion **AI, GenAI, aur Computer Vision**. Unka Final Year Project **TweetLens Pakistan** ne 13,000+ tweets from X (Twitter) ko process kiya — sentiment analysis on theft, loadshedding, aur water shortage. Dean's List 2026. 🏆`
-                : `Samreen Kazmi is a **Web Developer** at **Proagency ApS (Denmark)** and an **AI/ML enthusiast**. A Computer Science graduate from FAST NUCES (2022–2026) with a strong foundation in OOP, DSA, Databases, and Cloud Computing. Her professional focus is **WordPress, PHP, and Full-Stack development** — and her academic/project passion is **AI, GenAI, and Computer Vision**. Her Final Year Project **TweetLens Pakistan** processed **13,000+ tweets from X (Twitter)** — sentiment analysis on theft, loadshedding, and water shortage. Dean's List 2026. 🏆`;
-
+                ? `👋 **Samreen Kazmi**\n\n` +
+                  `💼 **Current Role**\n` +
+                  `Web Developer @ Proagency ApS (Denmark)\n\n` +
+                  `🎓 **Education**\n` +
+                  `BS Computer Science — FAST NUCES (2022–2026)\n\n` +
+                  `🎯 **Focus Areas**\n` +
+                  `• AI/ML Engineering\n` +
+                  `• NLP · Computer Vision · Generative AI\n` +
+                  `• WordPress · PHP · Full-Stack Development\n\n` +
+                  `🌟 **Highlight**\n` +
+                  `Final Year Project — **TweetLens Pakistan**\n` +
+                  `Processed 13,000+ tweets from X (Twitter) for sentiment analysis on theft, loadshedding, and water shortage.\n\n` +
+                  `──────────────\n` +
+                  `🏆 **Dean's List** — FAST NUCES (2026)\n\n` +
+                  `💡 Pooch sakte hain: "AI skills", "AI projects", ya "contact info"`
+                : `👋 **Samreen Kazmi**\n\n` +
+                  `💼 **Current Role**\n` +
+                  `Web Developer @ Proagency ApS (Denmark)\n\n` +
+                  `🎓 **Education**\n` +
+                  `BS Computer Science — FAST NUCES (2022–2026)\n\n` +
+                  `🎯 **Focus Areas**\n` +
+                  `• AI/ML Engineering\n` +
+                  `• NLP · Computer Vision · Generative AI\n` +
+                  `• WordPress · PHP · Full-Stack Development\n\n` +
+                  `🌟 **Highlight**\n` +
+                  `Final Year Project — **TweetLens Pakistan**\n` +
+                  `Processed 13,000+ tweets from X (Twitter) for sentiment analysis on theft, loadshedding, and water shortage.\n\n` +
+                  `──────────────\n` +
+                  `🏆 **Dean's List** — FAST NUCES (2026)\n\n` +
+                  `💡 Try asking: "AI skills", "AI projects", or "contact info"`;
         case 'name':
             updateMemory('intro');
             return lang === 'ur'
