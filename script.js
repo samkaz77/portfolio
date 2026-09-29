@@ -1012,12 +1012,12 @@ function renderProjectCard(proj) {
 // ============================================================
 function renderProjectsList(lang) {
     const lines = PROFILE.projects.map((p, i) =>
-        `${i + 1}. ${p.icon} **${p.shortName}** — ${p.desc}`
+        `${i + 1}. ${p.icon} **${p.shortName}**\n   ${p.desc}`
     ).join('\n\n');
 
     return lang === 'ur'
-        ? `Uske **AI/ML projects**:\n\n${lines}\n\nKis ki detail chahiye? Bas naam bolein (jaise "TweetLens" ya "DDPM").`
-        : `Her **AI/ML projects**:\n\n${lines}\n\nWant details on any? Just say the name (e.g., "TweetLens" or "DDPM").`;
+        ? `Uske **AI/ML projects**:\n\n${lines}\n\n──────────────────\nKis ki detail chahiye? Bas naam bolein (jaise "TweetLens" ya "DDPM").`
+        : `Her **AI/ML projects**:\n\n${lines}\n\n──────────────────\nWant details on any? Just say the name (e.g., "TweetLens" or "DDPM").`;
 }
 
 // ============================================================
