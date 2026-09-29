@@ -69,23 +69,23 @@ const PROFILE = {
             icon: '📊',
             shortName: 'TweetLens',
             desc: 'Final Year Project — a web application that collects and processes 13,000+ tweets from X (Twitter) to perform sentiment analysis on 3 major issues in Pakistan: theft, loadshedding, and water shortage.',
-            longDesc: 'Built an end-to-end NLP pipeline for real-world social sentiment analysis. Implemented preprocessing for code-mixed text (English, Urdu, Roman Urdu), handling transliteration inconsistencies. Built data collection pipeline and visualization dashboard for sentiment trends across issues. Implemented city-based filtering, trend dashboards, and automated PDF report generation.',
-            tech: ['Python', 'NLP', 'Transformers', 'Scikit-learn', 'Pandas', 'Streamlit'],
+            longDesc: 'Built an end-to-end NLP pipeline for real-world social sentiment analysis. Implemented preprocessing for code-mixed text (English, Urdu, Roman Urdu), handling transliteration inconsistencies. Built data collection pipeline and visualization dashboard for sentiment trends across issues. Implemented city-based filtering, trend dashboards, and automated PDF report generation. Fine-tuned XLM-RoBERTa for issue classification and CardiffNLP for sentiment analysis.',
+            tech: ['Python', 'XLM-RoBERTa', 'CardiffNLP', 'NLP', 'React.js', 'MongoDB'],
             metrics: ['📈 13,000+ tweets', '🎯 3 issues', '🏆 FYP'],
             highlight: 'Final Year Project · 13,000+ tweets analyzed · Social Impact',
             link: 'https://github.com/Aymanch2764/TweetLens-Pakistan'
         },
         {
-            name: 'Pix2Pix — Sketch-to-Photo Translation',
-            category: 'AI/ML · GANs',
-            icon: '🖼️',
-            shortName: 'Pix2Pix',
-            desc: 'Conditional GAN trained on 35,000 sketch-photo pairs to convert hand-drawn sketches into photorealistic images.',
-            longDesc: 'Implemented a Conditional GAN architecture for image-to-image translation. Built U-Net generator with skip connections and PatchGAN discriminator. Trained on 35,000 sketch-photo pairs with L1 loss optimization. Demonstrates understanding of neural networks, adversarial training, and model optimization.',
-            tech: ['PyTorch', 'GANs', 'U-Net', 'PatchGAN', 'Computer Vision'],
-            metrics: ['🖼️ 35K pairs', '🧠 U-Net + PatchGAN', '🎨 Image Gen'],
-            highlight: 'Deep Learning · Image Generation',
-            link: ''
+            name: 'DDPM — Diffusion Model from Scratch',
+            category: 'AI/ML · Generative AI',
+            icon: '🧠',
+            shortName: 'DDPM',
+            desc: 'Built a Denoising Diffusion Probabilistic Model from scratch in PyTorch — no pretrained pipelines, no high-level diffusion libraries.',
+            longDesc: 'Architecture: U-Net with attention at the bottleneck, sinusoidal time embeddings, and a cosine noise schedule (outperformed linear). Trained on CelebA-HQ (27,000 images, 128×128) with mixed precision on T4 GPU. Built interactive Gradio and Streamlit demos for real-time face generation from noise.',
+            tech: ['PyTorch', 'U-Net', 'Diffusion Models', 'Streamlit', 'Gradio'],
+            metrics: ['📊 PSNR 28.43 dB', '🎯 SSIM 0.8912', '🖼️ 27K images'],
+            highlight: 'From-scratch implementation · Diffusion Model',
+            link: 'https://ddpmmodel-aw6g3wegjdcnnpuuqz3lj2.streamlit.app/'
         },
         {
             name: 'Skin Lesion Classification — Medical AI',
@@ -93,11 +93,47 @@ const PROFILE = {
             icon: '🔬',
             shortName: 'Skin Lesion',
             desc: 'Multi-class classifier using ConvNeXt-B4 and Vision Transformer (ViT-B/16) to detect 7 types of skin lesions from the HAM10000 dataset.',
-            longDesc: 'Built a deep learning pipeline for medical image classification on HAM10000 and ISIC 2018 datasets. Compared CNN-based (ConvNeXt-B4) and Transformer-based (ViT-B/16) architectures. Applied transfer learning and data augmentation for strong performance on 7-class classification.',
-            tech: ['PyTorch', 'ConvNeXt', 'ViT', 'Transfer Learning', 'Computer Vision'],
-            metrics: ['🔬 7 classes', '📊 HAM10000', '🏥 Medical AI'],
+            longDesc: 'Built a deep learning pipeline for medical image classification on HAM10000 and ISIC 2018 datasets. Compared CNN-based (ConvNeXt-B4) and Transformer-based (ViT-B/16) architectures. Handled class imbalance with weighted random sampling and class-weighted cross-entropy loss. Applied data augmentation (random erasing, flips, color jittering) and regularization (AdamW, dropout, early stopping).',
+            tech: ['PyTorch', 'ConvNeXt-B4', 'ViT-B/16', 'Transfer Learning', 'Medical AI'],
+            metrics: ['🔬 7 classes', '📊 HAM10000 + ISIC', '🏥 Medical AI'],
             highlight: 'Healthcare AI · 7-Class Classification',
             link: 'https://github.com/usamasShk/ComputerVision'
+        },
+        {
+            name: 'CycleGAN — Unpaired Image Translation',
+            category: 'AI/ML · Computer Vision',
+            icon: '🎨',
+            shortName: 'CycleGAN',
+            desc: 'Implemented CycleGAN from scratch in PyTorch for unpaired sketch↔photo translation — no paired training data needed.',
+            longDesc: 'Architecture: ResNet Generator (6 residual blocks) + PatchGAN Discriminator (16×16 patches). Cycle-consistency loss + identity loss for unpaired training. Trained for 60 epochs on dual T4 GPUs with mixed precision (torch.cuda.amp). Models open-sourced on Hugging Face + deployed on Streamlit Cloud.',
+            tech: ['PyTorch', 'CycleGAN', 'ResNet', 'PatchGAN', 'HuggingFace'],
+            metrics: ['🎯 SSIM 0.65', '📊 PSNR 22.4 dB', '🎨 Sketch↔Photo'],
+            highlight: 'Unpaired Image Translation · GANs',
+            link: 'https://lnkd.in/deXUG9cY'
+        },
+        {
+            name: 'DCGAN + WGAN-GP — Anime Face Generation',
+            category: 'AI/ML · Generative AI',
+            icon: '👾',
+            shortName: 'DCGAN + WGAN-GP',
+            desc: 'Built two GANs from scratch in PyTorch — DCGAN and WGAN-GP — to generate 64×64 anime faces from 100-dim random noise.',
+            longDesc: 'DCGAN: 5-layer transposed conv generator + 5-layer strided conv discriminator. WGAN-GP: Same generator with InstanceNorm + Gradient Penalty. Trained on 5,000 anime faces. WGAN-GP solved mode collapse (diversity 8/10 vs 2/10 for DCGAN). Compared training stability and loss curves between both architectures.',
+            tech: ['PyTorch', 'DCGAN', 'WGAN-GP', 'GANs', 'Streamlit'],
+            metrics: ['👾 64×64 faces', '📊 Diversity 8/10', '🎨 5K dataset'],
+            highlight: 'Two GANs from scratch · Mode Collapse Solution',
+            link: 'https://lnkd.in/d57NXcMy'
+        },
+        {
+            name: 'Qwen2-VL Fine-Tuning with QLoRA',
+            category: 'AI/ML · Vision-Language',
+            icon: '🤖',
+            shortName: 'Qwen2-VL',
+            desc: 'Fine-tuned Qwen2-VL-2B-Instruct using QLoRA for document-to-Markdown generation.',
+            longDesc: 'Trained only 0.8% of parameters (18M) using 4-bit quantization on free-tier Kaggle T4 GPU. Dataset: Nougat Training Dataset (14k+ image-markdown pairs). Built interactive Gradio app for image → Markdown conversion. Demonstrates parameter-efficient fine-tuning (PEFT) for Vision-Language Models.',
+            tech: ['Qwen2-VL', 'QLoRA', 'HuggingFace', 'PEFT', 'Gradio'],
+            metrics: ['🤖 2B params', '📊 0.8% trained', '📄 Doc→Markdown'],
+            highlight: 'Vision-Language Model Fine-Tuning',
+            link: 'https://lnkd.in/eZ452kvc'
         }
     ],
     figmaProjects: [
@@ -698,12 +734,16 @@ function analyzeIntent(text) {
     const withLang = (intent) => ({ ...intent, lang });
 
     // --- 1. Specific project names FIRST ---
-    const aboutMatch = t.match(/\b(tweetlens|pix2pix|skin lesion|librasync|sk fashion|sk donuts|tweet lens)\b/);
+    const aboutMatch = t.match(/\b(tweetlens|pix2pix|skin lesion|ddpm|diffusion|cyclegan|cycle gan|dcgan|wgan|wgan-gp|qwen|qwen2|qwen2-vl|vision language|librasync|sk fashion|sk donuts|tweet lens)\b/);
     if (aboutMatch) {
         const name = aboutMatch[1];
         if (name === 'tweetlens' || name === 'tweet lens') return withLang({ type: 'project_tweetlens' });
         if (name === 'pix2pix') return withLang({ type: 'project_pix2pix' });
         if (name === 'skin lesion') return withLang({ type: 'project_skin' });
+        if (name === 'ddpm' || name === 'diffusion') return withLang({ type: 'project_ddpm' });
+        if (name === 'cyclegan' || name === 'cycle gan') return withLang({ type: 'project_cyclegan' });
+        if (name === 'dcgan' || name === 'wgan' || name === 'wgan-gp') return withLang({ type: 'project_dcgan' });
+        if (name === 'qwen' || name === 'qwen2' || name === 'qwen2-vl' || name === 'vision language') return withLang({ type: 'project_qwen' });
         if (name === 'librasync') return withLang({ type: 'figma_project', project: 'LibraSync — Mobile App Design' });
         if (name === 'sk fashion') return withLang({ type: 'figma_project', project: 'SK Fashion — Website Design' });
         if (name === 'sk donuts') return withLang({ type: 'figma_project', project: 'SK Donuts — Website Design' });
@@ -961,24 +1001,23 @@ function analyzeIntent(text) {
 }
 
 // ============================================================
-// RICH PROJECT CARD HELPER
+// RICH PROJECT CARD HELPER (for individual projects)
 // ============================================================
 function renderProjectCard(proj) {
-    return `<div class="project-card">
-        <div class="pc-header">
-            <span class="pc-icon">${proj.icon || '📁'}</span>
-            <span class="pc-title">${proj.name}</span>
-            <span class="pc-category">${proj.category}</span>
-        </div>
-        <div class="pc-desc">${proj.desc}</div>
-        <div class="pc-metrics">
-            ${proj.metrics.map(m => `<span class="pc-metric">${m}</span>`).join('')}
-        </div>
-        <div class="pc-tech">
-            ${proj.tech.map(t => `<span>${t}</span>`).join('')}
-        </div>
-        ${proj.link ? `<a href="${proj.link}" target="_blank" class="pc-link">🔗 View Repository</a>` : ''}
-    </div>`;
+    return `**${proj.icon} ${proj.name}**\n_${proj.category}_\n\n${proj.desc}\n\n**Tech:** ${proj.tech.join(' · ')}\n${proj.link ? `🔗 ${proj.link}` : ''}`;
+}
+
+// ============================================================
+// SIMPLE PROJECTS LIST (for "AI projects" query)
+// ============================================================
+function renderProjectsList(lang) {
+    const lines = PROFILE.projects.map((p, i) =>
+        `${i + 1}. ${p.icon} **${p.shortName}** — ${p.desc}`
+    ).join('\n\n');
+
+    return lang === 'ur'
+        ? `Uske **AI/ML projects**:\n\n${lines}\n\nKis ki detail chahiye? Bas naam bolein (jaise "TweetLens" ya "DDPM").`
+        : `Her **AI/ML projects**:\n\n${lines}\n\nWant details on any? Just say the name (e.g., "TweetLens" or "DDPM").`;
 }
 
 // ============================================================
@@ -1060,14 +1099,7 @@ function generateReply(intent) {
         case 'ai_projects':
         case 'projects': {
             updateMemory('projects');
-            const intro = lang === 'ur'
-                ? `Uske **AI/ML projects** (details ke liye naam bolein):\n\n`
-                : `Her **AI/ML projects** (say the name for details):\n\n`;
-            const cards = PROFILE.projects.map(renderProjectCard).join('');
-            const outro = lang === 'ur'
-                ? `<p style="margin-top:10px;">Kis ki detail chahiye? Bas naam bolein.</p>`
-                : `<p style="margin-top:10px;">Want details on any? Just say the name.</p>`;
-            return intro + cards + outro;
+            return renderProjectsList(lang);
         }
 
         case 'ai_experience': {
@@ -1103,9 +1135,7 @@ function generateReply(intent) {
                     : `Deeper dive into Samreen's AI/ML skills:\n\n**NLP:** Transformers, sentiment analysis, text classification\n**Computer Vision:** CNNs, ConvNeXt, ViT, GANs (U-Net + PatchGAN)\n**Frameworks:** PyTorch (primary), TensorFlow, Scikit-learn\n**Techniques:** Transfer learning, model optimization, data augmentation\n\nWant to know more about a specific area?`;
             }
             if (topic === 'ai_projects' || topic === 'projects') {
-                return lang === 'ur'
-                    ? `Samreen ke AI/ML projects ki detail:\n\n• **TweetLens Pakistan** (FYP) — NLP pipeline, 13,000+ tweets, sentiment + emotion analysis, city filtering, dashboards\n• **Pix2Pix** — Conditional GAN, U-Net generator + PatchGAN discriminator, 35K sketch-photo pairs\n• **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, transfer learning, HAM10000 (7 classes)\n\nKis project ki technical detail chahiye?`
-                    : `Deeper dive into Samreen's AI/ML projects:\n\n• **TweetLens Pakistan** (FYP) — NLP pipeline, 13,000+ tweets, sentiment + emotion analysis, city filtering, dashboards\n• **Pix2Pix** — Conditional GAN, U-Net generator + PatchGAN discriminator, 35K sketch-photo pairs\n• **Skin Lesion Classification** — ConvNeXt-B4 + ViT-B/16, transfer learning, HAM10000 (7 classes)\n\nWhich project would you like technical details on?`;
+                return renderProjectsList(lang);
             }
             if (topic === 'figma_projects_list' || topic === 'figma_projects_filtered') {
                 return lang === 'ur'
@@ -1152,7 +1182,7 @@ function generateReply(intent) {
                     ? `Uska standout Figma project **LibraSync** hai — complete mobile app design, university coursework, real UX thinking. Lekin **AI/ML unka main focus hai** — "AI projects" bolein!`
                     : `Her standout Figma project is **LibraSync** — a complete mobile app design from university coursework with real UX thinking. But **AI/ML is her main focus** — ask "AI projects"!`;
             }
-            if (topic === 'ai_projects' || topic === 'projects' || topic === 'project_tweetlens' || topic === 'project_pix2pix' || topic === 'project_skin') {
+            if (topic === 'ai_projects' || topic === 'projects' || topic === 'project_tweetlens' || topic === 'project_pix2pix' || topic === 'project_skin' || topic === 'project_ddpm' || topic === 'project_cyclegan' || topic === 'project_dcgan' || topic === 'project_qwen') {
                 return lang === 'ur'
                     ? `Uska sab se impressive **AI project TweetLens Pakistan** hai — Final Year Project, 13,000+ tweets par NLP analysis (theft, loadshedding, water shortage), real social impact. 🌟`
                     : `Her most impressive **AI project is TweetLens Pakistan** — Final Year Project, NLP analysis on 13,000+ tweets (theft, loadshedding, water shortage), real social impact. 🌟`;
@@ -1175,8 +1205,7 @@ function generateReply(intent) {
                     : `Great! Here are all 11 Figma projects:\n\n**University:** LibraSync\n**Self-taught:** SK Fashion, SK Donuts, UI Card Designs, Poster Designs, Landing Page, Dashboard UI, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(By the way, her main focus is AI/ML — you can also ask "AI projects"!)`;
             }
             if (topic === 'projects' || topic === 'ai_projects') {
-                const cards = PROFILE.projects.map(renderProjectCard).join('');
-                return (lang === 'ur' ? `Zaroor! Uske AI/ML projects:\n\n` : `Sure! Her AI/ML projects:\n\n`) + cards;
+                return renderProjectsList(lang);
             }
             return lang === 'ur'
                 ? `Zaroor! Kya jaanna chahenge — AI skills, projects, research, education, experience, ya contact?`
@@ -1214,8 +1243,8 @@ function generateReply(intent) {
                 partsUr.push('**Experience:** Web Developer at Proagency ApS (Denmark).');
             }
             if (/\bproject/.test(t)) {
-                partsEn.push('**AI Projects:** TweetLens (13K+ tweets, NLP), Pix2Pix (GANs), Skin Lesion (CV). Plus 11 Figma designs.');
-                partsUr.push('**AI Projects:** TweetLens (13K+ tweets, NLP), Pix2Pix (GANs), Skin Lesion (CV). Plus 11 Figma designs.');
+                partsEn.push('**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus 11 Figma designs.');
+                partsUr.push('**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus 11 Figma designs.');
             }
             if (/\bfigma/.test(t)) {
                 partsEn.push('**Figma:** 11 design projects (secondary skill).');
@@ -1375,7 +1404,7 @@ function generateReply(intent) {
             const s = intent.skill;
             updateMemory('specific_skill', s);
             const detailsEn = {
-                'python': `Yes! Python is her primary language — she uses it extensively for AI/ML projects (TweetLens, Pix2Pix, Skin Lesion). 🐍`,
+                'python': `Yes! Python is her primary language — she uses it extensively for AI/ML projects (TweetLens, DDPM, Pix2Pix, Skin Lesion). 🐍`,
                 'sql': `Absolutely — she handles SQL and database operations in her development work.`,
                 'wordpress': `Yes, WordPress is her current professional focus at Proagency ApS — and she has strong AI/ML skills alongside it.`,
                 'php': `Yes, PHP is part of her full-stack toolkit at Proagency ApS.`,
@@ -1388,7 +1417,7 @@ function generateReply(intent) {
                 'android': `Mobile Application Development was part of her CS curriculum.`
             };
             const detailsUr = {
-                'python': `Haan! Python uski primary language hai — AI/ML projects (TweetLens, Pix2Pix, Skin Lesion) mein use karti hai. 🐍`,
+                'python': `Haan! Python uski primary language hai — AI/ML projects (TweetLens, DDPM, Pix2Pix, Skin Lesion) mein use karti hai. 🐍`,
                 'sql': `Bilkul — wo SQL aur database operations handle karti hai.`,
                 'wordpress': `Haan, WordPress uska current professional role hai (Proagency ApS mein), aur saath hi unke paas strong AI/ML skills bhi hain.`,
                 'php': `Haan, PHP unke full-stack toolkit ka hissa hai.`,
@@ -1426,6 +1455,30 @@ function generateReply(intent) {
         case 'project_skin': {
             updateMemory('projects', 'Skin Lesion Classification');
             const proj = PROFILE.projects.find(p => p.shortName === 'Skin Lesion');
+            return renderProjectCard(proj);
+        }
+
+        case 'project_ddpm': {
+            updateMemory('projects', 'DDPM');
+            const proj = PROFILE.projects.find(p => p.shortName === 'DDPM');
+            return renderProjectCard(proj);
+        }
+
+        case 'project_cyclegan': {
+            updateMemory('projects', 'CycleGAN');
+            const proj = PROFILE.projects.find(p => p.shortName === 'CycleGAN');
+            return renderProjectCard(proj);
+        }
+
+        case 'project_dcgan': {
+            updateMemory('projects', 'DCGAN + WGAN-GP');
+            const proj = PROFILE.projects.find(p => p.shortName === 'DCGAN + WGAN-GP');
+            return renderProjectCard(proj);
+        }
+
+        case 'project_qwen': {
+            updateMemory('projects', 'Qwen2-VL');
+            const proj = PROFILE.projects.find(p => p.shortName === 'Qwen2-VL');
             return renderProjectCard(proj);
         }
 
@@ -1487,14 +1540,14 @@ function generateReply(intent) {
         case 'availability':
             updateMemory('contact');
             return lang === 'ur'
-                ? `Haan! Samreen **AI/ML roles** ke liye actively looking hain — full-time, internship, ya research.\n\n🎯 **AI/ML Focus:** Machine Learning, NLP, Computer Vision, GenAI\n💼 **Current:** Web Developer @ Proagency ApS (Denmark)\n📊 **Portfolio:** TweetLens (13K+ tweets), Pix2Pix (GANs), Skin Lesion (CV)\n\n📧 **${p.contact.email}**\n🔗 ${p.contact.linkedin}`
-                : `Yes! Samreen is **actively looking for AI/ML roles** — full-time, internship, or research.\n\n🎯 **AI/ML Focus:** Machine Learning, NLP, Computer Vision, GenAI\n💼 **Current:** Web Developer @ Proagency ApS (Denmark)\n📊 **Portfolio:** TweetLens (13K+ tweets), Pix2Pix (GANs), Skin Lesion (CV)\n\n📧 **${p.contact.email}**\n🔗 ${p.contact.linkedin}`;
+                ? `Haan! Samreen **AI/ML roles** ke liye actively looking hain — full-time, internship, ya research.\n\n🎯 **AI/ML Focus:** Machine Learning, NLP, Computer Vision, GenAI\n💼 **Current:** Web Developer @ Proagency ApS (Denmark)\n📊 **Portfolio:** TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n\n📧 **${p.contact.email}**\n🔗 ${p.contact.linkedin}`
+                : `Yes! Samreen is **actively looking for AI/ML roles** — full-time, internship, or research.\n\n🎯 **AI/ML Focus:** Machine Learning, NLP, Computer Vision, GenAI\n💼 **Current:** Web Developer @ Proagency ApS (Denmark)\n📊 **Portfolio:** TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n\n📧 **${p.contact.email}**\n🔗 ${p.contact.linkedin}`;
 
         case 'help':
             updateMemory('help');
             return lang === 'ur'
-                ? `Main Samreen ke baare mein ye sab bata sakta hoon:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), Pix2Pix, Skin Lesion\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — AI/ML roles ke liye available\n\nKisi bhi cheez ka naam bolein, ya quick buttons click karein!`
-                : `I can tell you about:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), Pix2Pix, Skin Lesion\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — available for AI/ML roles\n\nSay any topic name, or tap a quick button!`;
+                ? `Main Samreen ke baare mein ye sab bata sakta hoon:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — AI/ML roles ke liye available\n\nKisi bhi cheez ka naam bolein, ya quick buttons click karein!`
+                : `I can tell you about:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — available for AI/ML roles\n\nSay any topic name, or tap a quick button!`;
 
         case 'unknown':
         default:
@@ -1514,7 +1567,7 @@ function generateReply(intent) {
 }
 
 // ============================================================
-// TYPING ANIMATION
+// TYPING ANIMATION — Faster
 // ============================================================
 async function typeMessage(text, element) {
     element.classList.add('typing');
@@ -1524,7 +1577,7 @@ async function typeMessage(text, element) {
         current += chars[i];
         element.innerHTML = `🤖 ${current}`;
         chatMessages.scrollTop = chatMessages.scrollHeight;
-        const delay = /[ .,!?]/.test(chars[i]) ? 12 : 18;
+        const delay = /[ .,!?]/.test(chars[i]) ? 8 : 14;
         await new Promise(r => setTimeout(r, delay));
     }
     element.classList.remove('typing');
@@ -1566,17 +1619,22 @@ const QUICK_REPLIES = {
     ],
     ai: [
         { label: '📊 TweetLens', query: 'Tell me about TweetLens' },
-        { label: '🖼️ Pix2Pix', query: 'Tell me about Pix2Pix' },
+        { label: '🧠 DDPM', query: 'Tell me about DDPM' },
         { label: '🔬 Skin Lesion', query: 'Tell me about Skin Lesion Classification' },
+        { label: '🎨 CycleGAN', query: 'Tell me about CycleGAN' },
+        { label: '👾 DCGAN + WGAN-GP', query: 'Tell me about DCGAN WGAN-GP' },
+        { label: '🤖 Qwen2-VL', query: 'Tell me about Qwen2-VL' },
         { label: '🧠 AI Skills', query: 'What AI skills does she have?' },
-        { label: '🔬 Research', query: 'What are her research interests?' },
         { label: '💼 AI Roles?', query: 'Is she available for AI roles?' },
         { label: '🔙 Back', query: 'back' }
     ],
     projects: [
         { label: '📊 TweetLens (NLP)', query: 'Tell me about TweetLens' },
-        { label: '🖼️ Pix2Pix (GANs)', query: 'Tell me about Pix2Pix' },
+        { label: '🧠 DDPM (Diffusion)', query: 'Tell me about DDPM' },
         { label: '🔬 Skin Lesion (CV)', query: 'Tell me about Skin Lesion Classification' },
+        { label: '🎨 CycleGAN', query: 'Tell me about CycleGAN' },
+        { label: '👾 DCGAN + WGAN-GP', query: 'Tell me about DCGAN WGAN-GP' },
+        { label: '🤖 Qwen2-VL (VLM)', query: 'Tell me about Qwen2-VL' },
         { label: '🧠 AI Skills', query: 'What AI skills does she have?' },
         { label: '🔙 Back', query: 'back' }
     ],
@@ -1620,7 +1678,7 @@ function updateQuickRepliesForTopic(topic) {
         renderQuickReplies('default');
         return;
     }
-    if (topic === 'ai_skills' || topic === 'ai_focus' || topic === 'ai_projects' || topic === 'ai_experience' || topic === 'research' || topic === 'projects' || topic === 'project_tweetlens' || topic === 'project_pix2pix' || topic === 'project_skin') {
+    if (topic === 'ai_skills' || topic === 'ai_focus' || topic === 'ai_projects' || topic === 'ai_experience' || topic === 'research' || topic === 'projects' || topic === 'project_tweetlens' || topic === 'project_pix2pix' || topic === 'project_skin' || topic === 'project_ddpm' || topic === 'project_cyclegan' || topic === 'project_dcgan' || topic === 'project_qwen') {
         renderQuickReplies('ai');
     } else if (topic === 'figma_projects_list' || topic === 'figma_skill' || topic === 'figma_projects_filtered' || topic === 'figma_project') {
         renderQuickReplies('figma');
@@ -1673,7 +1731,7 @@ async function sendChatMessage() {
     const intent = analyzeIntent(text);
     const reply = generateReply(intent);
 
-    const thinkTime = Math.min(400 + reply.length * 5, 1200);
+    const thinkTime = Math.min(300 + reply.length * 3, 800);
     await new Promise(r => setTimeout(r, thinkTime));
 
     hideTypingDots();
