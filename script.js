@@ -150,7 +150,7 @@ const PROFILE = {
             category: 'university',
             type: 'University Coursework · Web UI',
             desc: 'A short showcase page displaying saree designs — a class activity focused on layout, product presentation, and visual hierarchy in Figma.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1414-310&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1414%3A310&show-proto-sidebar=1&fuid=1532066853133984483'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1350-308&t=UVXQWczWqbWxXgdV-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1414%3A310&show-proto-sidebar=1'
         },
         // ---------- SELF-TAUGHT ----------
         {
@@ -158,42 +158,42 @@ const PROFILE = {
             category: 'self-taught',
             type: 'Self-Taught Project · Interactive Web UI',
             desc: "A \"Today's Special Deals\" page for a donut brand with 4 donut types. Clicking a donut opens its detail page — built as an interactive Figma prototype.",
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=317-37&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=341%3A2&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=317-37&t=UVXQWczWqbWxXgdV-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=341%3A2&show-proto-sidebar=1'
         },
         {
             name: 'Shoe Poster — Concept Design',
             category: 'self-taught',
             type: 'Self-Taught Project · Poster Design',
             desc: 'A poster design concept for a shoe brand — first step in a poster series exploring composition, typography, and product focus.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=195-2&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=195-2&t=UVXQWczWqbWxXgdV-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         },
         {
             name: 'Dyson — Custom Product Page',
             category: 'self-taught',
             type: 'Self-Taught Project · Product Landing Page',
             desc: 'A custom product landing page concept for Dyson — focused on clean product presentation, hero section, and modern e-commerce layout.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=862-320&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=862%3A320&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=862-320&t=UVXQWczWqbWxXgdV-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=862%3A320&show-proto-sidebar=1'
         },
         {
             name: 'Ice Cream — Mobile UI Pages',
             category: 'self-taught',
             type: 'Self-Taught Project · Mobile UI',
             desc: 'A short set of mobile screens for an ice cream app — exploring mobile layout, product display, and simple interaction flow in Figma.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1111-313&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1111%3A313&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1111-379&t=UVXQWczWqbWxXgdV-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1111%3A313&show-proto-sidebar=1'
         },
         {
             name: 'Custom Poster Design',
             category: 'self-taught',
             type: 'Self-Taught Project · Poster Design',
             desc: 'A custom poster design exploring typography, color, and layout composition — a creative visual-design exercise in Figma.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1896-545&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1896-545&t=UVXQWczWqbWxXgdV-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         },
         {
             name: "The Sam's — Burger Place Signage",
             category: 'self-taught',
             type: 'Self-Taught Project · Signage / Branding',
             desc: "A signage design concept for a burger place called \"The Sam's\" — exploring branding, typography, and layout for physical signage.",
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1795-728&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1755-520&t=D1nSQpYuuEiyGoQW-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         }
     ],
     certifications: [
