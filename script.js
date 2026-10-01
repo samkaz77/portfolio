@@ -137,82 +137,63 @@ const PROFILE = {
         }
     ],
     figmaProjects: [
+        // ---------- UNIVERSITY COURSEWORK ----------
         {
-            name: 'LibraSync — Mobile App Design',
+            name: 'LibraSync — Library Management App UI',
             category: 'university',
             type: 'University Coursework · Mobile App UI/UX',
-            desc: 'A complete mobile application design for a library management system. Includes onboarding, book browsing, borrowing flow, and user dashboard screens — designed end-to-end in Figma with interactive prototype.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1649-504&t=RWlDInhEM3MlMXHB-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            desc: 'A mobile UI for a library management system — browsing books, borrowing flow, and user screens. Built end-to-end in Figma with an interactive prototype.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1497-310&t=UVXQWczWqbWxXgdV-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         },
         {
-            name: 'SK Fashion — Website Design',
+            name: 'Saree Soul — Saree Showcase Page',
+            category: 'university',
+            type: 'University Coursework · Web UI',
+            desc: 'A short showcase page displaying saree designs — a class activity focused on layout, product presentation, and visual hierarchy in Figma.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1414-310&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1414%3A310&show-proto-sidebar=1&fuid=1532066853133984483'
+        },
+        // ---------- SELF-TAUGHT ----------
+        {
+            name: "SK Donuts — Today's Special Deals Page",
             category: 'self-taught',
-            type: 'Self-Taught Project · Fashion Brand Website',
-            desc: 'A modern e-commerce website design for a fashion brand. Focuses on clean product grids, elegant typography, and a smooth shopping experience — built as a self-learning project.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1795-755&t=0Q2nbSmP0ouXEBDi-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Interactive Web UI',
+            desc: "A \"Today's Special Deals\" page for a donut brand with 4 donut types. Clicking a donut opens its detail page — built as an interactive Figma prototype.",
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=317-37&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=341%3A2&show-proto-sidebar=1'
         },
         {
-            name: 'SK Donuts — Website Design',
+            name: 'Shoe Poster — Concept Design',
             category: 'self-taught',
-            type: 'Self-Taught Project · Sweet Shop Website',
-            desc: 'A playful and colorful website design for a sweet shop / donut brand. Features product showcase, ordering flow, and brand-focused visuals — designed as a self-learning exercise.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1780-584&t=DWP7d4Bh618eScky-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Poster Design',
+            desc: 'A poster design concept for a shoe brand — first step in a poster series exploring composition, typography, and product focus.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=195-2&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         },
         {
-            name: 'UI Card Designs',
+            name: 'Dyson — Custom Product Page',
             category: 'self-taught',
-            type: 'Self-Taught Project · Component Design',
-            desc: 'A collection of modern UI card components — product cards, profile cards, and info cards — exploring different layouts, shadows, and visual hierarchies.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1806-511&t=SdPxWh3TuWeXu4NI-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Product Landing Page',
+            desc: 'A custom product landing page concept for Dyson — focused on clean product presentation, hero section, and modern e-commerce layout.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=862-320&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=862%3A320&show-proto-sidebar=1'
         },
         {
-            name: 'Poster Designs',
+            name: 'Ice Cream — Mobile UI Pages',
             category: 'self-taught',
-            type: 'Self-Taught Project · Graphic Design',
-            desc: 'Creative poster designs exploring typography, color theory, and layout composition — blending visual storytelling with design principles.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1366-311&t=607DSneQnrBxhggr-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Mobile UI',
+            desc: 'A short set of mobile screens for an ice cream app — exploring mobile layout, product display, and simple interaction flow in Figma.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1111-313&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1111%3A313&show-proto-sidebar=1'
         },
         {
-            name: 'Landing Page Design',
+            name: 'Custom Poster Design',
             category: 'self-taught',
-            type: 'Self-Taught Project · Web UI',
-            desc: 'A clean, modern landing page design focused on conversion-friendly layouts, hero sections, and clear call-to-actions.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1118-379&t=JPGfGvGDSNVlQted-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1111%3A313&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Poster Design',
+            desc: 'A custom poster design exploring typography, color, and layout composition — a creative visual-design exercise in Figma.',
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1896-545&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         },
         {
-            name: 'Dashboard UI Design',
+            name: "The Sam's — Burger Place Signage",
             category: 'self-taught',
-            type: 'Self-Taught Project · Data UI',
-            desc: 'An analytics-style dashboard design featuring charts, statistics, and data visualizations — designed to feel clean and data-driven.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1950-535&t=fBhonqjzk2WWpEyx-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
-        },
-        {
-            name: 'Mobile UI Kit',
-            category: 'self-taught',
-            type: 'Self-Taught Project · Design System',
-            desc: 'A reusable mobile UI component kit — buttons, forms, navigation, and cards — built to speed up mobile app design workflows.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1896-545&t=pQlhJ899bJKkSnae-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
-        },
-        {
-            name: 'E-commerce Product Page',
-            category: 'self-taught',
-            type: 'Self-Taught Project · Web UI',
-            desc: 'A focused e-commerce product detail page — product images, size selection, reviews, and add-to-cart flow.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=270-3&t=V9OfMYn6T9WKaFmT-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=341%3A2&show-proto-sidebar=1'
-        },
-        {
-            name: 'Portfolio Website Design',
-            category: 'self-taught',
-            type: 'Self-Taught Project · Personal Branding',
-            desc: 'A personal portfolio website design exploring hero sections, project grids, and about sections — a creative self-branding exercise.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=462-240&t=TiyB7tcFWfpjSBhr-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=454%3A226&show-proto-sidebar=1'
-        },
-        {
-            name: 'Blog / Article Layout',
-            category: 'self-taught',
-            type: 'Self-Taught Project · Editorial UI',
-            desc: 'A clean editorial layout for blog articles — typography-focused with comfortable reading rhythm and clear hierarchy.',
-            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1531-335&t=f8h1xEfV6va88YFn-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
+            type: 'Self-Taught Project · Signage / Branding',
+            desc: "A signage design concept for a burger place called \"The Sam's\" — exploring branding, typography, and layout for physical signage.",
+            link: 'https://www.figma.com/proto/lfqvylTPBgUgXOPsvbsA0z/Untitled?node-id=1795-728&t=UVXQWczWqbWxXgdV-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=237%3A84&show-proto-sidebar=1'
         }
     ],
     certifications: [
@@ -665,7 +646,12 @@ function fixTypos(text) {
         [/\bgen ?ai\b|\bgenai\b/gi, 'generative ai'],
         [/\bmachine ?learning\b/gi, 'machine learning'],
         [/\bdeep ?learning\b/gi, 'deep learning'],
-        [/\bcomputer ?vision\b/gi, 'computer vision']
+        [/\bcomputer ?vision\b/gi, 'computer vision'],
+        [/\bsaree ?soul\b|\bsari ?soul\b|\bsareesoul\b/gi, 'saree soul'],
+        [/\bsam'?s\b|\bsams\b/gi, "the sam's"],
+        [/\bshoe poster\b|\bshoes poster\b/gi, 'shoe poster'],
+        [/\bdyson\b/gi, 'dyson'],
+        [/\bice ?cream\b/gi, 'ice cream']
     ];
 
     for (const [pattern, replacement] of corrections) {
@@ -734,7 +720,7 @@ function analyzeIntent(text) {
     const withLang = (intent) => ({ ...intent, lang });
 
     // --- 1. Specific project names FIRST ---
-    const aboutMatch = t.match(/\b(tweetlens|pix2pix|skin lesion|ddpm|diffusion|cyclegan|cycle gan|dcgan|wgan|wgan-gp|qwen|qwen2|qwen2-vl|vision language|librasync|sk fashion|sk donuts|tweet lens)\b/);
+    const aboutMatch = t.match(/\b(tweetlens|pix2pix|skin lesion|ddpm|diffusion|cyclegan|cycle gan|dcgan|wgan|wgan-gp|qwen|qwen2|qwen2-vl|vision language|librasync|saree soul|sk donuts|the sam's|dyson|ice cream|shoe poster|custom poster|tweet lens)\b/);
     if (aboutMatch) {
         const name = aboutMatch[1];
         if (name === 'tweetlens' || name === 'tweet lens') return withLang({ type: 'project_tweetlens' });
@@ -744,9 +730,14 @@ function analyzeIntent(text) {
         if (name === 'cyclegan' || name === 'cycle gan') return withLang({ type: 'project_cyclegan' });
         if (name === 'dcgan' || name === 'wgan' || name === 'wgan-gp') return withLang({ type: 'project_dcgan' });
         if (name === 'qwen' || name === 'qwen2' || name === 'qwen2-vl' || name === 'vision language') return withLang({ type: 'project_qwen' });
-        if (name === 'librasync') return withLang({ type: 'figma_project', project: 'LibraSync — Mobile App Design' });
-        if (name === 'sk fashion') return withLang({ type: 'figma_project', project: 'SK Fashion — Website Design' });
-        if (name === 'sk donuts') return withLang({ type: 'figma_project', project: 'SK Donuts — Website Design' });
+        if (name === 'librasync') return withLang({ type: 'figma_project', project: 'LibraSync — Library Management App UI' });
+        if (name === 'saree soul') return withLang({ type: 'figma_project', project: 'Saree Soul — Saree Showcase Page' });
+        if (name === 'sk donuts') return withLang({ type: 'figma_project', project: "SK Donuts — Today's Special Deals Page" });
+        if (name === "the sam's") return withLang({ type: 'figma_project', project: "The Sam's — Burger Place Signage" });
+        if (name === 'dyson') return withLang({ type: 'figma_project', project: 'Dyson — Custom Product Page' });
+        if (name === 'ice cream') return withLang({ type: 'figma_project', project: 'Ice Cream — Mobile UI Pages' });
+        if (name === 'shoe poster') return withLang({ type: 'figma_project', project: 'Shoe Poster — Concept Design' });
+        if (name === 'custom poster') return withLang({ type: 'figma_project', project: 'Custom Poster Design' });
     }
 
     // --- 2. Follow-up detection ---
@@ -866,28 +857,28 @@ function analyzeIntent(text) {
     const isProjectQuestion = /\b(project|projects|work|portfolio|made|built|designed|created|kaam)\b/.test(t);
 
     if (/\b(posters?|poster design)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'Poster Designs' });
+        return withLang({ type: 'figma_project', project: 'Custom Poster Design' });
     }
     if (/\b(landing page)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'Landing Page Design' });
+        return withLang({ type: 'figma_project', project: 'Dyson — Custom Product Page' });
     }
     if (/\b(dashboard)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'Dashboard UI Design' });
+        return withLang({ type: 'figma_project', project: 'Dyson — Custom Product Page' });
     }
     if (/\b(ui kit|mobile ui|design system)\b/.test(t)) {
-        return withLang({ type: 'figma_project', project: 'Mobile UI Kit' });
+        return withLang({ type: 'figma_project', project: 'Ice Cream — Mobile UI Pages' });
     }
     if (/\b(ecommerce|e-commerce|product page)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'E-commerce Product Page' });
-    }
-    if (/\b(portfolio design|portfolio website design)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'Portfolio Website Design' });
+        return withLang({ type: 'figma_project', project: 'Dyson — Custom Product Page' });
     }
     if (/\b(blog|article|editorial)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'Blog / Article Layout' });
+        return withLang({ type: 'figma_project', project: 'Custom Poster Design' });
     }
     if (/\b(cards?|card design|ui card)\b/.test(t) && isFigmaQuestion) {
-        return withLang({ type: 'figma_project', project: 'UI Card Designs' });
+        return withLang({ type: 'figma_project', project: 'Custom Poster Design' });
+    }
+    if (/\b(signage|sign board|signboard)\b/.test(t) && isFigmaQuestion) {
+        return withLang({ type: 'figma_project', project: "The Sam's — Burger Place Signage" });
     }
 
     if (isFigmaQuestion && (isProjectQuestion || wantsUniversity || wantsSelfTaught || wantsNotSelfTaught || wantsNotUniversity)) {
@@ -1112,8 +1103,8 @@ function generateReply(intent) {
         case 'ai_focus': {
             updateMemory('ai_focus');
             return lang === 'ur'
-                ? `Samreen ka **main focus AI/ML** hai:\n\n🧠 **Primary:** AI/ML Engineering\n📝 **Specializations:** NLP, Computer Vision, Generative AI\n🎯 **Goal:** Impactful AI/ML systems build karna\n📊 **TweetLens:** 13,000+ tweets analyzed, 3 major issues\n🔬 **Other projects:** Pix2Pix (GANs), Skin Lesion (CV)\n\n"AI skills" ya "AI projects" bolein detail ke liye!`
-                : `Samreen's **main focus is AI/ML**:\n\n🧠 **Primary:** AI/ML Engineering\n📝 **Specializations:** NLP, Computer Vision, Generative AI\n🎯 **Goal:** Build impactful AI/ML systems\n📊 **TweetLens:** 13,000+ tweets analyzed, 3 major issues\n🔬 **Other projects:** Pix2Pix (GANs), Skin Lesion (CV)\n\nSay "AI skills" or "AI projects" for details!`;
+                ? `Samreen ka **main focus AI/ML** hai:\n\n🧠 **Primary:** AI/ML Engineering\n📝 **Specializations:** NLP, Computer Vision, Generative AI\n🎯 **Goal:** Impactful AI/ML systems build karna\n📊 **TweetLens:** 13,000+ tweets analyzed, 3 major issues\n🔬 **Other projects:** DDPM (Diffusion), Skin Lesion (CV), GANs\n\n"AI skills" ya "AI projects" bolein detail ke liye!`
+                : `Samreen's **main focus is AI/ML**:\n\n🧠 **Primary:** AI/ML Engineering\n📝 **Specializations:** NLP, Computer Vision, Generative AI\n🎯 **Goal:** Build impactful AI/ML systems\n📊 **TweetLens:** 13,000+ tweets analyzed, 3 major issues\n🔬 **Other projects:** DDPM (Diffusion), Skin Lesion (CV), GANs\n\nSay "AI skills" or "AI projects" for details!`;
         }
 
         case 'research': {
@@ -1139,8 +1130,8 @@ function generateReply(intent) {
             }
             if (topic === 'figma_projects_list' || topic === 'figma_projects_filtered') {
                 return lang === 'ur'
-                    ? `Samreen ke Figma kaam ki detail (secondary skill):\n\n• **LibraSync** (university) — mobile app UI\n• **SK Fashion, SK Donuts** — brand websites\n• 8 aur self-taught designs\n\nNote: Figma unka secondary skill hai — main focus AI/ML hai.`
-                    : `Some detail on Samreen's Figma work (secondary skill):\n\n• **LibraSync** (university) — mobile app UI\n• **SK Fashion, SK Donuts** — brand websites\n• 8 more self-taught designs\n\nNote: Figma is her secondary skill — her main focus is AI/ML.`;
+                    ? `Samreen ke Figma kaam ki detail (secondary skill):\n\n• **LibraSync** (university) — library management mobile app UI\n• **Saree Soul** (university) — saree showcase page\n• **SK Donuts** — interactive "Today's Special" donut page\n• **Dyson** — custom product page\n• **Shoe Poster** & **Custom Poster** — poster designs\n• **Ice Cream** — mobile UI pages\n• **The Sam's** — burger place signage\n\nNote: Figma unka secondary skill hai — main focus AI/ML hai.`
+                    : `Some detail on Samreen's Figma work (secondary skill):\n\n• **LibraSync** (university) — library management mobile app UI\n• **Saree Soul** (university) — saree showcase page\n• **SK Donuts** — interactive "Today's Special" donut page\n• **Dyson** — custom product page\n• **Shoe Poster** & **Custom Poster** — poster designs\n• **Ice Cream** — mobile UI pages\n• **The Sam's** — burger place signage\n\nNote: Figma is her secondary skill — her main focus is AI/ML.`;
             }
             if (topic === 'education') {
                 return lang === 'ur'
@@ -1161,8 +1152,8 @@ function generateReply(intent) {
             const topic = intent.topic;
             if (topic === 'ai_focus' || topic === 'ai_skills' || topic === 'ai_projects') {
                 return lang === 'ur'
-                    ? `Samreen AI/ML mein isliye aayi kyunki wo real-world problems solve karna chahti thi — Pakistani social issues (TweetLens), medical imaging (Skin Lesion), aur creative AI (Pix2Pix). FAST NUCES ne AI aur Generative AI courses se strong foundation di, aur FYP ne NLP mein hands-on experience. 🎯`
-                    : `Samreen chose AI/ML because she wanted to solve real-world problems — Pakistani social issues (TweetLens), medical imaging (Skin Lesion), and creative AI (Pix2Pix). FAST NUCES gave her a strong foundation through AI and Generative AI courses, and her FYP gave her hands-on NLP experience. 🎯`;
+                    ? `Samreen AI/ML mein isliye aayi kyunki wo real-world problems solve karna chahti thi — Pakistani social issues (TweetLens), medical imaging (Skin Lesion), aur creative AI (DDPM, GANs). FAST NUCES ne AI aur Generative AI courses se strong foundation di, aur FYP ne NLP mein hands-on experience. 🎯`
+                    : `Samreen chose AI/ML because she wanted to solve real-world problems — Pakistani social issues (TweetLens), medical imaging (Skin Lesion), and creative AI (DDPM, GANs). FAST NUCES gave her a strong foundation through AI and Generative AI courses, and her FYP gave her hands-on NLP experience. 🎯`;
             }
             return lang === 'ur'
                 ? `Achha sawal! Specific bataiye kis cheez ka "why" jaanna hai — AI choice, projects, education, ya career.`
@@ -1179,8 +1170,8 @@ function generateReply(intent) {
             }
             if (topic === 'figma_projects_list' || topic === 'figma_projects_filtered' || topic === 'figma_skill' || topic === 'figma_project') {
                 return lang === 'ur'
-                    ? `Uska standout Figma project **LibraSync** hai — complete mobile app design, university coursework, real UX thinking. Lekin **AI/ML unka main focus hai** — "AI projects" bolein!`
-                    : `Her standout Figma project is **LibraSync** — a complete mobile app design from university coursework with real UX thinking. But **AI/ML is her main focus** — ask "AI projects"!`;
+                    ? `Uska standout Figma project **LibraSync** hai — complete library management mobile app UI, university coursework, real UX thinking. Lekin **AI/ML unka main focus hai** — "AI projects" bolein!`
+                    : `Her standout Figma project is **LibraSync** — a complete library management mobile app UI from university coursework with real UX thinking. But **AI/ML is her main focus** — ask "AI projects"!`;
             }
             if (topic === 'ai_projects' || topic === 'projects' || topic === 'project_tweetlens' || topic === 'project_pix2pix' || topic === 'project_skin' || topic === 'project_ddpm' || topic === 'project_cyclegan' || topic === 'project_dcgan' || topic === 'project_qwen') {
                 return lang === 'ur'
@@ -1200,9 +1191,10 @@ function generateReply(intent) {
         case 'affirmative': {
             const topic = intent.topic;
             if (topic === 'figma_projects_list' || topic === 'figma_skill') {
+                const figmaNames = PROFILE.figmaProjects.map(f => f.name).join(', ');
                 return lang === 'ur'
-                    ? `Zaroor! Uske saare 11 Figma projects:\n\n**University:** LibraSync\n**Self-taught:** SK Fashion, SK Donuts, UI Card Designs, Poster Designs, Landing Page, Dashboard UI, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(Waise, unka main focus AI/ML hai — "AI projects" bhi pooch sakte hain!)`
-                    : `Great! Here are all 11 Figma projects:\n\n**University:** LibraSync\n**Self-taught:** SK Fashion, SK Donuts, UI Card Designs, Poster Designs, Landing Page, Dashboard UI, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(By the way, her main focus is AI/ML — you can also ask "AI projects"!)`;
+                    ? `Zaroor! Uske saare ${PROFILE.figmaProjects.length} Figma projects:\n\n${figmaNames}\n\n(Waise, unka main focus AI/ML hai — "AI projects" bhi pooch sakte hain!)`
+                    : `Great! Here are all ${PROFILE.figmaProjects.length} Figma projects:\n\n${figmaNames}\n\n(By the way, her main focus is AI/ML — you can also ask "AI projects"!)`;
             }
             if (topic === 'projects' || topic === 'ai_projects') {
                 return renderProjectsList(lang);
@@ -1243,12 +1235,12 @@ function generateReply(intent) {
                 partsUr.push('**Experience:** Web Developer at Proagency ApS (Denmark).');
             }
             if (/\bproject/.test(t)) {
-                partsEn.push('**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus 11 Figma designs.');
-                partsUr.push('**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus 11 Figma designs.');
+                partsEn.push(`**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus ${PROFILE.figmaProjects.length} Figma designs.`);
+                partsUr.push(`**AI Projects:** TweetLens (13K+ tweets, NLP), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL. Plus ${PROFILE.figmaProjects.length} Figma designs.`);
             }
             if (/\bfigma/.test(t)) {
-                partsEn.push('**Figma:** 11 design projects (secondary skill).');
-                partsUr.push('**Figma:** 11 design projects (secondary skill).');
+                partsEn.push(`**Figma:** ${PROFILE.figmaProjects.length} design projects (secondary skill).`);
+                partsUr.push(`**Figma:** ${PROFILE.figmaProjects.length} design projects (secondary skill).`);
             }
             if (/\bcontact/.test(t)) {
                 partsEn.push(`**Contact:** ${p.contact.email} · ${p.contact.linkedin}`);
@@ -1292,7 +1284,7 @@ function generateReply(intent) {
             return renderProjectCard(proj);
         }
 
-                case 'intro':
+        case 'intro':
             updateMemory('intro');
             return lang === 'ur'
                 ? `👋 **Samreen Kazmi**\n\n` +
@@ -1343,7 +1335,7 @@ function generateReply(intent) {
                 ? `Wo Lahore, Pakistan mein based hain. Denmark ki ek company ke liye remotely kaam karti hain. 🇵🇰`
                 : `She's based in Lahore, Pakistan. She currently works remotely for a company based in Denmark. 🇵🇰`;
 
-                case 'education':
+        case 'education':
             updateMemory('education');
             return lang === 'ur'
                 ? `🎓 **Education**\n\n` +
@@ -1413,16 +1405,16 @@ function generateReply(intent) {
         case 'figma_skill':
             updateMemory('figma_skill');
             return lang === 'ur'
-                ? `Haan, Figma uske **secondary skill** hai. Usne **11 design projects** kiye hain — 1 university coursework aur 10 self-taught. Lekin unka **main focus AI/ML hai** — "AI skills" bhi poochein!`
-                : `Yes, Figma is one of her **secondary skills**. She's done **11 design projects** — 1 university coursework and 10 self-taught. But her **main focus is AI/ML** — ask "AI skills" too!`;
+                ? `Haan, Figma uske **secondary skill** hai. Usne **${PROFILE.figmaProjects.length} design projects** kiye hain — 2 university coursework aur ${PROFILE.figmaProjects.filter(f => f.category === 'self-taught').length} self-taught. Lekin unka **main focus AI/ML hai** — "AI skills" bhi poochein!`
+                : `Yes, Figma is one of her **secondary skills**. She's done **${PROFILE.figmaProjects.length} design projects** — 2 university coursework and ${PROFILE.figmaProjects.filter(f => f.category === 'self-taught').length} self-taught. But her **main focus is AI/ML** — ask "AI skills" too!`;
 
         case 'figma_projects_list': {
-            const uni = PROFILE.figmaProjects.filter(f => f.category === 'university');
-            const self = PROFILE.figmaProjects.filter(f => f.category === 'self-taught');
             updateMemory('figma_projects_list');
+            const uniNames = PROFILE.figmaProjects.filter(f => f.category === 'university').map(f => f.name).join(', ');
+            const selfNames = PROFILE.figmaProjects.filter(f => f.category === 'self-taught').map(f => f.name).join(', ');
             return lang === 'ur'
-                ? `Uske paas **${PROFILE.figmaProjects.length} Figma projects** hain (secondary skill):\n\n🎓 **University:** LibraSync\n📚 **Self-taught:** SK Fashion, SK Donuts, UI Cards, Posters, Landing Page, Dashboard, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(Unka main focus AI/ML hai — "AI projects" bhi poochein!)`
-                : `She has **${PROFILE.figmaProjects.length} Figma projects** (secondary skill):\n\n🎓 **University:** LibraSync\n📚 **Self-taught:** SK Fashion, SK Donuts, UI Cards, Posters, Landing Page, Dashboard, Mobile UI Kit, E-commerce Page, Portfolio Website, Blog Layout.\n\n(Her main focus is AI/ML — try "AI projects" too!)`;
+                ? `Uske paas **${PROFILE.figmaProjects.length} Figma projects** hain (secondary skill):\n\n🎓 **University:** ${uniNames}\n📚 **Self-taught:** ${selfNames}\n\n(Unka main focus AI/ML hai — "AI projects" bhi poochein!)`
+                : `She has **${PROFILE.figmaProjects.length} Figma projects** (secondary skill):\n\n🎓 **University:** ${uniNames}\n📚 **Self-taught:** ${selfNames}\n\n(Her main focus is AI/ML — try "AI projects" too!)`;
         }
 
         case 'figma_projects_filtered': {
@@ -1467,7 +1459,7 @@ function generateReply(intent) {
             const s = intent.skill;
             updateMemory('specific_skill', s);
             const detailsEn = {
-                'python': `Yes! Python is her primary language — she uses it extensively for AI/ML projects (TweetLens, DDPM, Pix2Pix, Skin Lesion). 🐍`,
+                'python': `Yes! Python is her primary language — she uses it extensively for AI/ML projects (TweetLens, DDPM, CycleGAN, Skin Lesion). 🐍`,
                 'sql': `Absolutely — she handles SQL and database operations in her development work.`,
                 'wordpress': `Yes, WordPress is her current professional focus at Proagency ApS — and she has strong AI/ML skills alongside it.`,
                 'php': `Yes, PHP is part of her full-stack toolkit at Proagency ApS.`,
@@ -1480,7 +1472,7 @@ function generateReply(intent) {
                 'android': `Mobile Application Development was part of her CS curriculum.`
             };
             const detailsUr = {
-                'python': `Haan! Python uski primary language hai — AI/ML projects (TweetLens, DDPM, Pix2Pix, Skin Lesion) mein use karti hai. 🐍`,
+                'python': `Haan! Python uski primary language hai — AI/ML projects (TweetLens, DDPM, CycleGAN, Skin Lesion) mein use karti hai. 🐍`,
                 'sql': `Bilkul — wo SQL aur database operations handle karti hai.`,
                 'wordpress': `Haan, WordPress uska current professional role hai (Proagency ApS mein), aur saath hi unke paas strong AI/ML skills bhi hain.`,
                 'php': `Haan, PHP unke full-stack toolkit ka hissa hai.`,
@@ -1609,8 +1601,8 @@ function generateReply(intent) {
         case 'help':
             updateMemory('help');
             return lang === 'ur'
-                ? `Main Samreen ke baare mein ye sab bata sakta hoon:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — AI/ML roles ke liye available\n\nKisi bhi cheez ka naam bolein, ya quick buttons click karein!`
-                : `I can tell you about:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — 11 design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — available for AI/ML roles\n\nSay any topic name, or tap a quick button!`;
+                ? `Main Samreen ke baare mein ye sab bata sakta hoon:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — ${PROFILE.figmaProjects.length} design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — AI/ML roles ke liye available\n\nKisi bhi cheez ka naam bolein, ya quick buttons click karein!`
+                : `I can tell you about:\n\n🧠 **AI/ML** — skills, projects, research interests\n📁 **Projects** — TweetLens (13K+ tweets), DDPM (Diffusion), Skin Lesion (CV), CycleGAN, DCGAN/WGAN-GP, Qwen2-VL\n💼 **Experience** — Proagency ApS (Web Developer)\n🎓 **Education** — FAST NUCES + Dean's List\n🛠️ **Skills** — AI/ML, technical, soft\n🎨 **Figma** — ${PROFILE.figmaProjects.length} design projects (secondary skill)\n📜 **Certifications** — 2 Coursera UX certs\n🌍 **Languages** — Urdu, English, Turkish, Korean\n📧 **Contact** — email + LinkedIn\n💼 **Hire?** — available for AI/ML roles\n\nSay any topic name, or tap a quick button!`;
 
         case 'unknown':
         default:
